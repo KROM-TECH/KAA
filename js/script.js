@@ -12,27 +12,27 @@ $(document ).ready(function() {
 
     $('#dynamicBtn').click(function(){
         //employee form values
-        var fname = $("#fname").val();
-        var lname = $("#lname").val();
-        var email = $("#email").val();
-        var age = $("#age").val();
-        var gender = $("#gender").val();
-        var yearsOfExperience = $("#yearsOfExperience").val();
-        var isfulltime = $('#isFullTime').is(":checked")
+        var uploader = $("#uploader").val();
+        var university = $("#university").val();
+        var bookName = $("#bookName").val();
+        var bookAuthor = $("#bookAuthor").val();
+        var faculty = $("#faculty").val();
+        var department = $("#department").val();
+        var level = $('#level').is(":checked")
 
         //check if you need to create or update an employee
         if($(this).text() == "Save Changes"){
             // Add an employee with document name as (first letter of firstname).(lastname)
             // Example: Ervis Trupja -> E.Trupja
-            var docuName = fname.charAt(0)+"."+lname;
+            var docuName = uploader.charAt(0)+"."+university;
             db.collection("books").doc(docuName).set({
-                fName:fname,
-                lName: lname,
-                email: email,
-                age: age,
-                gender: gender,
-                yearsOfExperience: yearsOfExperience,
-                isFullTime: isfulltime
+                uploader:uploader,
+                university: university,
+                bookName: bookName,
+                bookAuthor: bookAuthor,
+                faculty: faculty,
+                department: department,
+                level: level
             })
             .then(function(docRef) {
                  $('#operationStatus').html('<div class="alert alert-success"><strong>Success!</strong> Employee was created!</div>').delay(2500).fadeOut('slow');
@@ -46,16 +46,16 @@ $(document ).ready(function() {
         else{
             // Create a reference to the document by following the same pattern of the document name.
             // Example: Ervis Trupja -> E.Trupja
-            var docuName = fname.charAt(0)+"."+lname;
+            var docuName = uploader.charAt(0)+"."+university;
             var sfDocRef = db.collection("books").doc(docuName);
             sfDocRef.set({ 
-                fName:fname,
-                lName: lname,
-                email: email,
-                age: age,
-                gender: gender,
-                yearsOfExperience: yearsOfExperience,
-                isFullTime: isfulltime
+                uploader:uploader,
+                university: university,
+                bookName: bookName,
+                bookAuthor: bookAuthor,
+                faculty: faculty,
+                department: department,
+                level: level
             })
             .then(function() {
                 $('#operationStatus').html('<div class="alert alert-success"><strong>Success!</strong> Employee was updated.</div>').delay(2500).fadeOut('slow');
@@ -78,25 +78,25 @@ $(document ).ready(function() {
         $('.employeeForm').css("display", "block");
         $('#dynamicBtn').text('Update Employee');
 
-        $("#fname").val($(this).closest('tr').find('.fname').text());
-        $("#lname").val($(this).closest('tr').find('.lname').text());
-        $("#email").val($(this).closest('tr').find('.email').text());
-        $("#age").val($(this).closest('tr').find('.age').text());
-        $("#gender").val($(this).closest('tr').find('.gender').text());
-        $("#yearsOfExperience").val($(this).closest('tr').find('.yearsofexperience').text());
-        $("#isFullTime").prop('checked', $(this).closest('tr').find('.isfulltime').text() === 'true');
+        $("#uploader").val($(this).closest('tr').find('.uploader').text());
+        $("#university").val($(this).closest('tr').find('.university').text());
+        $("#bookName").val($(this).closest('tr').find('.bookName').text());
+        $("#bookAuthor").val($(this).closest('tr').find('.bookAuthor').text());
+        $("#faculty").val($(this).closest('tr').find('.faculty').text());
+        $("#department").val($(this).closest('tr').find('.department').text());
+        $("#level").prop('checked', $(this).closest('tr').find('.level').text() === 'true');
     });
 
     // Delete employee
     $("tbody.tbodyData").on("click","td.deleteEmployee", function(){
 
         //Get the Employee Data
-        var fName = $(this).closest('tr').find('.fname').text(); //First Name
-        var lName = $(this).closest('tr').find('.lname').text(); //Last Name
+        var uploader = $(this).closest('tr').find('.uploader').text(); //First Name
+        var university = $(this).closest('tr').find('.university').text(); //Last Name
 
         // Create a reference to the document by following the same pattern of the document name.
         // Example: Ervis Trupja -> E.Trupja
-        var docuName = fName.charAt(0)+"."+lName;
+        var docuName = uploader.charAt(0)+"."+university;
         db.collection("books").doc(docuName).delete().then(function() {
             $('#operationStatus').html('<div class="alert alert-success"><strong>Success!</strong> Employee was deleted.</div>').delay(2500).fadeOut('slow');
             LoadData();
@@ -109,7 +109,7 @@ $(document ).ready(function() {
         console.log('You entered: ', $(this).val());
         //Get the Employee Data
         var searchValue = $(this).val()
-        booksRef.where("fName", "==", searchValue)
+        booksRef.where("uploader", "==", searchValue)
         .onSnapshot(function(querySnapshot) {
             LoadTableData(querySnapshot)
         });
@@ -128,13 +128,13 @@ $(document ).ready(function() {
         querySnapshot.forEach(function(doc) {
             var document = doc.data();
             tableRow +='<tr>';
-            tableRow += '<td class="fname">' + document.fName + '</td>';
-            tableRow += '<td class="lname">' + document.lName + '</td>';
-            tableRow += '<td class="email">' + document.email + '</td>';
-            tableRow += '<td class="age">' + document.age + '</td>';
-            tableRow += '<td class="gender">' + document.gender + '</td>';
-            tableRow += '<td class="yearsofexperience">' + document.yearsOfExperience + '</td>';
-            tableRow += '<td class="isfulltime">' + document.isFullTime + '</td>';
+            tableRow += '<td class="uploader">' + document.uploader + '</td>';
+            tableRow += '<td class="university">' + document.university + '</td>';
+            tableRow += '<td class="bookName">' + document.bookName + '</td>';
+            tableRow += '<td class="bookAuthor">' + document.bookAuthor + '</td>';
+            tableRow += '<td class="faculty">' + document.faculty + '</td>';
+            tableRow += '<td class="department">' + document.department + '</td>';
+            tableRow += '<td class="level">' + document.level + '</td>';
             tableRow += '<td class="editEmployee"><i class="fa fa-pencil" aria-hidden="true" style="color:green"></i></td>'
             tableRow += '<td class="deleteEmployee"><i class="fa fa-trash" aria-hidden="true" style="color:red"></i></td>'
             tableRow += '</tr>';

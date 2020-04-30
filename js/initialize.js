@@ -2,128 +2,54 @@
  var db = firebase.firestore();
  var booksRef = db.collection("books");
 
- booksRef.doc("R.Dikles").set({
-     fName: "Ranice", 
-     lName: "Dikles", 
-     email: "rdikles0@hatena.ne.jp",
-     age: 39, 
-     gender: 'Female',
-     yearsOfExperience: 9,
-     isFullTime: true,
+ booksRef.doc("1").set({
+     uploader: "Harith", 
+     university: "university of lagos", 
+     bookName: "stuff",
+     bookAuthor: "Ben 10", 
+     faculty: 'Engineering',
+     department: "systems",
+     level: 200,
+     semester: "first",
  });
 
- booksRef.doc("A.Lamberton").set({
-     fName: "Adler", 
-     lName: "Lamberton", 
-     email: "alamberton1@ft.com",
-     age: 50, 
-     gender: 'Male',
-     yearsOfExperience: 7,
-     isFullTime: true,
+ booksRef.doc("2").set({
+     uploader: "Heritage", 
+     university: "Unversity of Ibadan", 
+     bookName: "I hate school",
+     bookAuthor: "hard guy", 
+     faculty: 'Engineering',
+     department: "chemical",
+     level: 200,
+     semester: "first",
  });
 
- booksRef.doc("J.Summerson").set({
-     fName: "Jeremy", 
-     lName: "Summerson", 
-     email: "jsummerson2@aboutads.info",
-     age: 58, 
-     gender: 'Male',
-     yearsOfExperience: 6,
-     isFullTime: true,
+ booksRef.doc("3").set({
+     uploader: "Deji", 
+     university: "university of abuja", 
+     bookName: "Their Daddy",
+     bookAuthor: "Naruto uzumaki", 
+     faculty: 'Engineering',
+     department: "met&mat",
+     level: 200,
+     semester: "first",
  });
 
- booksRef.doc("G.O'Byrne").set({
-     fName: "Gunilla", 
-     lName: "O'Byrne", 
-     email: "gobyrne3@bbc.co.uk",
-     age: 56, 
-     gender: 'Female',
-     yearsOfExperience: 14,
-     isFullTime: true,
- });
-
- booksRef.doc("W.Ells").set({
-     fName: "Weston", 
-     lName: "Ells", 
-     email: "wells4@linkedin.com",
-     age: 60, 
-     gender: 'Male',
-     yearsOfExperience: 8,
-     isFullTime: false,
- });
-
- booksRef.doc("F.Penhall").set({
-     fName: "Freddy", 
-     lName: "Penhall", 
-     email: "fpenhall5@blogspot.com",
-     age: 50, 
-     gender: 'Female',
-     yearsOfExperience: 8,
-     isFullTime: true,
- });
-
- booksRef.doc("M.Pothergill").set({
-     fName: "Marion", 
-     lName: "Pothergill", 
-     email: "mpothergill6@theglobeandmail.com",
-     age: 39, 
-     gender: 'Male',
-     yearsOfExperience: 14,
-     isFullTime: false,
- });
  
- booksRef.doc("P.Leechman").set({
-     fName: "Prinz", 
-     lName: "Leechman", 
-     email: "pleechman7@ehow.com",
-     age: 58, 
-     gender: 'Male',
-     yearsOfExperience: 14,
-     isFullTime: true,
- });
-
- booksRef.doc("B.Newby").set({
-     fName: "Babita", 
-     lName: "Newby", 
-     email: "bnewby9@techcrunch.com",
-     age: 41, 
-     gender: 'Female',
-     yearsOfExperience: 10,
-     isFullTime: false,
- });
-
- booksRef.doc("C.Blest").set({
-     fName: "Celestia", 
-     lName: "Blest", 
-     email: "cblesta@delicious.com",
-     age: 19, 
-     gender: 'Female',
-     yearsOfExperience: 1,
-     isFullTime: false,
- });
- 
- booksRef.doc("N.Tather").set({
-     fName: "Nannette", 
-     lName: "Tather", 
-     email: "ntatherb@delicious.com",
-     age: 40, 
-     gender: 'Female',
-     yearsOfExperience: 13,
-     isFullTime: true,
- });
 
  booksRef.get().then(function(querySnapshot) {
      var tableRow='';
      querySnapshot.forEach(function(doc) {
          var document = doc.data();
          tableRow +='<tr>';
-         tableRow += '<td class="fname">' + document.fName + '</td>';
-         tableRow += '<td class="lname">' + document.lName + '</td>';
-         tableRow += '<td class="email">' + document.email + '</td>';
-         tableRow += '<td class="age">' + document.age + '</td>';
-         tableRow += '<td class="gender">' + document.gender + '</td>';
-         tableRow += '<td class="yearsofexperience">' + document.yearsOfExperience + '</td>';
-         tableRow += '<td class="isfulltime">' + document.isFullTime + '</td>';
+         tableRow += '<td class="uploader">' + document.uploader + '</td>';
+         tableRow += '<td class="university">' + document.university + '</td>';
+         tableRow += '<td class="bookName">' + document.bookName + '</td>';
+         tableRow += '<td class="bookAuthor">' + document.bookAuthor + '</td>';
+         tableRow += '<td class="faculty">' + document.faculty + '</td>';
+         tableRow += '<td class="department">' + document.department + '</td>';
+         tableRow += '<td class="level">' + document.level + '</td>';
+         tableRow += '<td class="semester">' + document.semester + '</td>';
          tableRow += '<td class="editEmployee"><i class="fa fa-pencil" aria-hidden="true" style="color:green"></i></td>'
          tableRow += '<td class="deleteEmployee"><i class="fa fa-trash" aria-hidden="true" style="color:red"></i></td>'
          tableRow += '</tr>';

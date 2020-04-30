@@ -16,75 +16,75 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./style/theme.min.css">
 
-   <!-- The core Firebase JS SDK is always required and must be listed first -->
-   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
- 
-   <!-- TODO: Add SDKs for Firebase products that you want to use
-      https://firebase.google.com/docs/web/setup#available-libraries -->
-   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
- 
-   <script>
-     // Your web app's Firebase configuration
-     var firebaseConfig = {
-       apiKey: "AIzaSyAtrKgkzn0EQub3tJ_2Q_0uoK3zMfqn-20",
-       authDomain: "kromtech-archive.firebaseapp.com",
-       databaseURL: "https://kromtech-archive.firebaseio.com",
-       projectId: "kromtech-archive",
-       storageBucket: "kromtech-archive.appspot.com",
-       messagingSenderId: "147947718015",
-       appId: "1:147947718015:web:c1afcf6e27d8a3a8e2c64a",
-       measurementId: "G-7C2TXMJXZR"
-     };
-     // Initialize Firebase
-     firebase.initializeApp(firebaseConfig);
-     firebase.analytics();
-   </script>
- 
-   <script src="./js/theme.min.js"></script>
-   <script src="./js/initialize.js"></script>
-   <script src="./js/filter.js"></script>
-   <script src="./js/script.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
 
-      
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAtrKgkzn0EQub3tJ_2Q_0uoK3zMfqn-20",
+      authDomain: "kromtech-archive.firebaseapp.com",
+      databaseURL: "https://kromtech-archive.firebaseio.com",
+      projectId: "kromtech-archive",
+      storageBucket: "kromtech-archive.appspot.com",
+      messagingSenderId: "147947718015",
+      appId: "1:147947718015:web:c1afcf6e27d8a3a8e2c64a",
+      measurementId: "G-7C2TXMJXZR"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
+  <script src="./js/theme.min.js"></script>
+  <script src="./js/initialize.js"></script>
+  <script src="./js/filter.js"></script>
+  <script src="./js/script.js"></script>
+
+
 </head>
 
-<body >
+<body>
 
-  
+
   <section class="pt-4 pt-md-11">
     <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-10 col-lg-8 text-center">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 text-center">
 
-            <!-- Heading -->
-            <h1>
-              <span class="text-primary">Kromtech Academic Archive</span>
-            </h1>
+          <!-- Heading -->
+          <h1>
+            <span class="text-primary">Kromtech Academic Archive</span>
+          </h1>
 
-            <!-- Text -->
-            <p class="lead text-gray-700">
-             Below are the list of all our books in the archive
-            </p>
-        </div>
+          <!-- Text -->
+          <p class="lead text-gray-700">
+            Below are the list of all our books in the archive
+          </p>
         </div>
       </div>
-      </div>
-      </section>
+    </div>
+    </div>
+  </section>
 
-   <div class="container">
+  <div class="container">
 
-           <!-- button to create an employee -->
-           <!-- <button class="btn btn-success" id="createEmployee"> 
+    <!-- button to create an employee -->
+    <!-- <button class="btn btn-success" id="createEmployee"> 
                Create Employee <i class="fa fa-plus" aria-hidden="true"></i>
            </button> -->
 
-           <!-- Filters drop down -->
-           <!-- <div class="btn-group pull-right">
+    <!-- Filters drop down -->
+    <!-- <div class="btn-group pull-right">
                <button type="button" 
                        class="btn btn-default dropdown-toggle" 
                        data-toggle="dropdown" 
@@ -103,12 +103,12 @@
                </div>
            </div> -->
 
-           <!-- input to seach for an employee -->
-           <input class="btn btn-default  pull-right" placeholder="Search by name..." id="searchEmployee"> </input>
+    <!-- input to seach for an employee -->
+    <input class="btn btn-default  pull-right" placeholder="Search by name..." id="searchEmployee"> </input>
 
-           <div id="operationStatus"></div>
+    <div id="operationStatus"></div>
 
-           <!-- <div class="employeeForm">
+    <!-- <div class="employeeForm">
                            <div class="form-row">
                              <div class="form-group col-md-4">
                                <label for="fname">First Name</label>
@@ -153,30 +153,33 @@
                                <button class="btn btn-primary" id="dynamicBtn"></button>
                            </div>
            </div> -->
-   
-           <table class="table table-striped" >
-                   <thead class="thead-inverse">
-                     <tr>
-                       <th scope="col">First Name</th>
-                       <th scope="col">Last Name</th>
-                       <th scope="col">Email</th>
-                       <th scope="col">Age</th>
-                       <th scope="col">Gender</th>
-                       <th scope="col">Years of experience</th>
-                       <th scope="col">Full Time</th>
-                       <th scope="col">Edit</th>
-                       <th scope="col">Delete</th>
-                     </tr>
-                   </thead>
-                   <tbody class="tbodyData">
-                   </tbody>
-           </table>
-   </div>
+    <div class="container" style="overflow-x: scroll;">
+      <table class="table table-striped">
+        <thead class="thead-inverse">
+          <tr>
+            <th scope="col">Uploader</th>
+            <th scope="col">University</th>
+            <th scope="col">Book Name</th>
+            <th scope="col">Book Author</th>
+            <th scope="col">Faculty</th>
+            <th scope="col">Department</th>
+            <th scope="col">Level</th>
+            <th scope="col">Semester</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody class="tbodyData">
+        </tbody>
+      </table>
+    </div>
+
+  </div>
 
 
   <!-- Js--Scripts -->
 
- 
+
 </body>
 
 </html>

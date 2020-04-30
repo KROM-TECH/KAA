@@ -6,14 +6,14 @@
 
           $('#onlyMalesFilter').click(function(){
               console.log('onlyMalesFilter Filter executed');
-              booksRef.where("gender", "==", "Male")
+              booksRef.where("faculty", "==", "Male")
               .onSnapshot(function(querySnapshot) {
                   LoadTableData(querySnapshot);
               });
           });
 
           $('#fullTimeFilter').click(function(){
-              booksRef.where("isFullTime", "==", true)
+              booksRef.where("level", "==", true)
                   .onSnapshot(function(querySnapshot) {
                       LoadTableData(querySnapshot);
               });
@@ -21,24 +21,24 @@
 
           $('#olderThenFilter').click(function(){
               //older than 30
-              booksRef.where("age", ">=", 30)
+              booksRef.where("bookAuthor", ">=", 30)
               .onSnapshot(function(querySnapshot) {
                   LoadTableData(querySnapshot);
               });
           });
 
-          $('#ageBetweenFilter').click(function(){
+          $('#bookAuthorBetweenFilter').click(function(){
               //older than 35, but younger than 50
-              booksRef.where("age", ">=", 35).where("age", "<=", 50)
+              booksRef.where("bookAuthor", ">=", 35).where("bookAuthor", "<=", 50)
               .onSnapshot(function(querySnapshot) {
                   LoadTableData(querySnapshot);
               });
           });
 
-          $('#yearsOfExperienceFilter').click(function(){
+          $('#departmentFilter').click(function(){
               //female and 5-10 years of experience
-              booksRef.where("gender", "==", "Female")
-              booksRef.where("yearsOfExperience", ">=", 5).where("yearsOfExperience", "<=", 10)
+              booksRef.where("faculty", "==", "Female")
+              booksRef.where("department", ">=", 5).where("department", "<=", 10)
               .onSnapshot(function(querySnapshot) {
                   LoadTableData(querySnapshot);
               });
@@ -55,13 +55,13 @@
               querySnapshot.forEach(function(doc) {
                   var document = doc.data();
                   tableRow +='<tr>';
-                  tableRow += '<td class="fname">' + document.fName + '</td>';
-                  tableRow += '<td class="lname">' + document.lName + '</td>';
-                  tableRow += '<td class="email">' + document.email + '</td>';
-                  tableRow += '<td class="age">' + document.age + '</td>';
-                  tableRow += '<td class="gender">' + document.gender + '</td>';
-                  tableRow += '<td class="yearsofexperience">' + document.yearsOfExperience + '</td>';
-                  tableRow += '<td class="isfulltime">' + document.isFullTime + '</td>';
+                  tableRow += '<td class="uploader">' + document.uploader + '</td>';
+                  tableRow += '<td class="university">' + document.university + '</td>';
+                  tableRow += '<td class="bookName">' + document.bookName + '</td>';
+                  tableRow += '<td class="bookAuthor">' + document.bookAuthor + '</td>';
+                  tableRow += '<td class="faculty">' + document.faculty + '</td>';
+                  tableRow += '<td class="department">' + document.department + '</td>';
+                  tableRow += '<td class="level">' + document.level + '</td>';
                   tableRow += '<td class="editEmployee"><i class="fa fa-pencil" aria-hidden="true" style="color:green"></i></td>'
                   tableRow += '<td class="deleteEmployee"><i class="fa fa-trash" aria-hidden="true" style="color:red"></i></td>'
                   tableRow += '</tr>';
