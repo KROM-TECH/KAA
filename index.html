@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KAA</title>
+  <script type="text/javascript"
+    src="https://platform-api.sharethis.com/js/sharethis.js#property=5eab29747525e90012616b88&product=inline-share-buttons"
+    async="async"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -16,6 +19,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="./style/theme.min.css">
 
 </head>
@@ -47,142 +51,174 @@
             with the help the Nigerian Student this Could be faster. <br> below are two buttons to Upload and Share.
           </p>
           <div class="container my-3">
-            <button class="btn btn-success-soft mt-3">Share</button>
-            <button class="btn btn-info-soft mt-3" data-toggle="modal" data-target="#modalExample">Upload</button>
-            <button class="btn btn-primary-soft mt-3">Available Books</button>
+            <button class="btn btn-success-soft mt-3" data-toggle="modal" data-target="#shareModal">Share</button>
+            <button class="btn btn-info-soft mt-3" data-toggle="modal" data-target="#uploadModal">Upload</button>
+            <button class="btn btn-primary-soft mt-3" href="books.html">Available Books</button>
 
-            
-            <div class="modal fade" id="modalExample" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+            <div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-body">
-        
+
                     <!-- Close -->
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">×</span>
                     </button>
-        
+                    <div class="sharethis-inline-share-buttons"></div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+
+                    <!-- Close -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+
                     <!-- Image -->
                     <div class="text-center">
                       <img src="./img/logo.svg" alt="..." class="img-fluid mb-3" style="width: 200px;">
                     </div>
-        
+
                     <!-- Heading -->
                     <h2 class="font-weight-bold text-center mb-1" id="modalExampleTitle">
                       Fill with Sense
                     </h2>
-        
+
                     <!-- Text -->
                     <p class="font-size-lg text-center text-muted mb-6 mb-md-8">
                       Check available books to avoid repetition especially with large files
                     </p>
-        
+
                     <!-- Form -->
                     <form>
                       <div class="row">
                         <div class="col-12 col-md-6">
-        
+
                           <!-- First name -->
                           <div class="form-label-group">
-                            <input type="text" class="form-control form-control-flush" id="registrationFirstNameModal" placeholder="First name">
+                            <input type="text" class="form-control form-control-flush" id="registrationFirstNameModal"
+                              placeholder="First name">
                             <label for="registrationFirstNameModal">Your Name / Nickname</label>
                           </div>
-        
+
                         </div>
                         <div class="col-12 col-md-6">
-        
+
                           <!-- Last name -->
                           <div class="form-label-group">
-                            <input type="text" class="form-control form-control-flush" id="registrationLastNameModal" placeholder="Last name">
+                            <input type="text" class="form-control form-control-flush" id="registrationLastNameModal"
+                              placeholder="Last name">
                             <label for="registrationLastNameModal">Your University</label>
                           </div>
-        
+
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-12 col-md-6">
-        
+
                           <!-- Email -->
                           <div class="form-label-group">
-                            <input type="text" class="form-control form-control-flush" id="registrationEmailModal" placeholder="Email">
+                            <input type="text" class="form-control form-control-f  lush" id="registrationEmailModal"
+                              placeholder="Email">
                             <label for="registrationEmailModal">Book Name</label>
                           </div>
-        
+
                         </div>
                         <div class="col-12 col-md-6">
-        
+
                           <!-- Password -->
                           <div class="form-label-group">
-                            <input type="text" class="form-control form-control-flush" id="registrationPasswordModal" placeholder="Password">
+                            <input type="text" class="form-control form-control-flush" id="registrationPasswordModal"
+                              placeholder="Password">
                             <label for="registrationPasswordModal">book Author</label>
                           </div>
-        
+
                         </div>
                       </div>
-                      
+
                       <div class="row">
                         <div class="col-12 col-md-6">
-        
+
                           <!-- Email -->
                           <div class="form-label-group">
-                            <input type="text" class="form-control form-control-flush" id="registrationEmailModal" placeholder="Email">
+                            <input type="text" class="form-control form-control-flush" id="registrationEmailModal"
+                              placeholder="Email">
                             <label for="registrationEmailModal">Faculty</label>
                           </div>
-        
+
                         </div>
                         <div class="col-12 col-md-6">
-        
+
                           <!-- Password -->
                           <div class="form-label-group">
-                            <input type="text" class="form-control form-control-flush" id="registrationPasswordModal" placeholder="Password">
+                            <input type="text" class="form-control form-control-flush" id="registrationPasswordModal"
+                              placeholder="Password">
                             <label for="registrationPasswordModal">Department</label>
                           </div>
-        
+
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-12 col-md-6">
-        
+
                           <!-- Email -->
                           <div class="form-label-group">
-                            <input type="text" class="form-control form-control-flush" id="registrationEmailModal" placeholder="Email">
+                            <input type="text" class="form-control form-control-flush" id="registrationEmailModal"
+                              placeholder="Email">
                             <label for="registrationEmailModal">Level</label>
                           </div>
-        
+
                         </div>
                         <div class="col-12 col-md-6">
-        
+
                           <!-- Password -->
                           <div class="form-label-group">
-                            <input type="text" class="form-control form-control-flush" id="registrationPasswordModal" placeholder="Password">
+                            <input type="text" class="form-control form-control-flush" id="registrationPasswordModal"
+                              placeholder="Password">
                             <label for="registrationPasswordModal">Semester</label>
                           </div>
-        
+
                         </div>
                       </div>
-                      
+
                       <div class="row">
                         <div class="col-12">
-        
+
                           <!-- Submit -->
-                          <button class="btn btn-block btn-outline-success mt-3 lift">
-                            Click to Upload Resource
-                          </button>
-        
+                          <div class="custom-upload">
+                            <label class="btn btn-block btn-outline-success mt-3 lift" for="file"
+                              data-element="custom-upload-button">Upload Files </label><i
+                              class="fa fa-file-image-o"></i>
+                            <input class="custom-upload__input" id="file" type="file"
+                              data-behaviour="custom-upload-input" value="" multiple />
+                          </div>
+                          <!-- <input class="btn btn-block btn-outline-success mt-3 lift" type="file" id="myFile" name="filename"> -->
+                          </input>
+
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-12">
-        
+
                           <!-- Submit -->
                           <button class="btn btn-block btn-primary mt-3 lift">
                             Submit
                           </button>
-        
+
                         </div>
                       </div>
                     </form>
-        
+
                   </div>
                 </div>
               </div>
@@ -195,7 +231,48 @@
 
   <!-- Js--Scripts -->
 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAtrKgkzn0EQub3tJ_2Q_0uoK3zMfqn-20",
+      authDomain: "kromtech-archive.firebaseapp.com",
+      databaseURL: "https://kromtech-archive.firebaseio.com",
+      projectId: "kromtech-archive",
+      storageBucket: "kromtech-archive.appspot.com",
+      messagingSenderId: "147947718015",
+      appId: "1:147947718015:web:c1afcf6e27d8a3a8e2c64a",
+      measurementId: "G-7C2TXMJXZR"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+  <script src="filter.js"></script>
+  <script src="filter.js"></script>
   <script src="./js/theme.min.js"></script>
+  <script>
+    $(function () {
+      function init() {
+        $('[data-behaviour="custom-upload-input"]').on('change', updateButton);
+      };
+
+      function updateButton(e) {
+        var inputValue = $(e.currentTarget).val().split('\\').pop()
+        $('[data-element="custom-upload-button"]').text(inputValue)
+        e.preventDefault;
+        console.log(inputValue)
+      };
+
+      init()
+    });
+  </script>
 </body>
 
 </html>

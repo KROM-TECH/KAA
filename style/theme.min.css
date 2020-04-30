@@ -5,7 +5,16 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
- 
+ .custom-upload__input {
+  height: 0;
+  left: -10000px;
+  overflow: hidden;
+  position: absolute;
+}
+
+
+
+
 
 :root {
   --blue: #007bff;
