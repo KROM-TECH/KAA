@@ -53,7 +53,7 @@
           <div class="container my-3">
             <button class="btn btn-success-soft mt-3" data-toggle="modal" data-target="#shareModal">Share</button>
             <button class="btn btn-info-soft mt-3" data-toggle="modal" data-target="#uploadModal">Upload</button>
-            <button class="btn btn-primary-soft mt-3" href="books.html">Available Books</button>
+            <a class="btn btn-primary-soft mt-3" href="books.html">Available Books</a>
 
 
             <div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -253,10 +253,11 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
+    firebase.firestore();
   </script>
-  <script src="filter.js"></script>
-  <script src="filter.js"></script>
-  <script src="./js/theme.min.js"></script>
+  <script src="./js/initialize.js"></script>
+  <script src="./js/filter.js"></script>
+  <script src="./js/script.js"></script>
   <script>
     $(function () {
       function init() {

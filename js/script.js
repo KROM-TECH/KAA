@@ -1,6 +1,6 @@
 // Initialize Cloud Firestore through Firebase
 var db = firebase.firestore();
-var employeesRef = db.collection("employees");
+var booksRef = db.collection("books");
 
 
 $(document ).ready(function() {
@@ -25,7 +25,7 @@ $(document ).ready(function() {
             // Add an employee with document name as (first letter of firstname).(lastname)
             // Example: Ervis Trupja -> E.Trupja
             var docuName = fname.charAt(0)+"."+lname;
-            db.collection("employees").doc(docuName).set({
+            db.collection("books").doc(docuName).set({
                 fName:fname,
                 lName: lname,
                 email: email,
@@ -47,7 +47,7 @@ $(document ).ready(function() {
             // Create a reference to the document by following the same pattern of the document name.
             // Example: Ervis Trupja -> E.Trupja
             var docuName = fname.charAt(0)+"."+lname;
-            var sfDocRef = db.collection("employees").doc(docuName);
+            var sfDocRef = db.collection("books").doc(docuName);
             sfDocRef.set({ 
                 fName:fname,
                 lName: lname,
@@ -97,7 +97,7 @@ $(document ).ready(function() {
         // Create a reference to the document by following the same pattern of the document name.
         // Example: Ervis Trupja -> E.Trupja
         var docuName = fName.charAt(0)+"."+lName;
-        db.collection("employees").doc(docuName).delete().then(function() {
+        db.collection("books").doc(docuName).delete().then(function() {
             $('#operationStatus').html('<div class="alert alert-success"><strong>Success!</strong> Employee was deleted.</div>').delay(2500).fadeOut('slow');
             LoadData();
         }).catch(function(error) {
@@ -109,7 +109,7 @@ $(document ).ready(function() {
         console.log('You entered: ', $(this).val());
         //Get the Employee Data
         var searchValue = $(this).val()
-        employeesRef.where("fName", "==", searchValue)
+        booksRef.where("fName", "==", searchValue)
         .onSnapshot(function(querySnapshot) {
             LoadTableData(querySnapshot)
         });
@@ -118,7 +118,7 @@ $(document ).ready(function() {
 
 
       function LoadData(){
-        employeesRef.get().then(function(querySnapshot) {
+        booksRef.get().then(function(querySnapshot) {
             LoadTableData(querySnapshot)
         });
       }
