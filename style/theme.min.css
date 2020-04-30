@@ -6065,7 +6065,6 @@ a.close.disabled {
 }
 
 .modal {
-  position: fixed;
   top: 0;
   left: 0;
   z-index: 1050;
@@ -6177,7 +6176,7 @@ a.close.disabled {
 }
 
 .modal-backdrop {
-  position: fixed;
+  position: static !important;
   top: 0;
   left: 0;
   z-index: 1040;
