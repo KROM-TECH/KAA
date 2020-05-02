@@ -22,6 +22,7 @@ $(document).ready(function () {
       var department = $("#department").val();
       var level = $('#level').val();
       var semester = $('#semester').val();
+      var book = $('#book').val().split('\\').pop()
 
 
 
@@ -37,6 +38,7 @@ $(document).ready(function () {
         department: department,
         level: level,
         semester: semester,
+        book: book,
       })
         .then(function () {
           // $('#operationStatus').html('<div class="alert alert-success"><strong>Success!</strong> Employee was updated.</div>').delay(2500).fadeOut('slow');

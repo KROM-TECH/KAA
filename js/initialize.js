@@ -48,14 +48,15 @@ var booksRef = db.collection("books");
 booksRef.get().then(function (querySnapshot) {
   console.log("SHOW-FILE called!");
 
-
   var storageReference = firebase.storage().ref();
+  querySnapshot.forEach(function (doc) {
+    var document = doc.data();
+  console.log(document)
   storageReference
-    .child("books/" + 'vuejs_tutorial.pdf')
+    .child("books/" + `${document.book}`)
     .getDownloadURL()
     .then(url => {
-      querySnapshot.forEach(function (doc) {
-        var document = doc.data();
+
         var tableRow = '';
         tableRow += '<tr>';
         tableRow += '<td class="uploader">' + document.uploader + '</td>';
@@ -70,7 +71,10 @@ booksRef.get().then(function (querySnapshot) {
         tableRow += '</tr>';
         $('tbody.tbodyData').append(tableRow);
 
-      });
+    }).catch(error => {
+      alert("Something went wrong!");
+      console.log("Error === ", error);
+    });;
     })
     .catch(error => {
       alert("Something went wrong!");
