@@ -24,6 +24,11 @@ $(document).ready(function () {
       var semester = $('#semester').val();
       var book = $('#book').val().split('\\').pop()
 
+      if (uploader == "" || university == "" || bookName == "" || bookAuthor == "" || faculty == "" || department == "" || level == "" || semester == "" || book == "" ){
+        alert('all files are required na. dont stress us, we also students')
+        window.location = "index.html"
+        break
+      }
 
 
 
@@ -114,3 +119,4 @@ $(document).ready(function () {
     });
     $('tbody.tbodyData').html(tableRow);
   }
+ 

@@ -72,14 +72,11 @@ booksRef.get().then(function (querySnapshot) {
         $('tbody.tbodyData').append(tableRow);
 
     }).catch(error => {
-      alert("Something went wrong!");
-      console.log("Error === ", error);
-    });;
-    })
-    .catch(error => {
-      alert("Something went wrong!");
-      console.log("Error === ", error);
+      // alert("Something went wrong!");
+      // console.log("Error === ", error);
     });
+    })
+
 
 
 });
