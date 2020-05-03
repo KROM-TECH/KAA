@@ -19,6 +19,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/7672e5925f.js"></script>
 
   <link rel="stylesheet" href="./style/theme.min.css">
 
@@ -26,11 +27,11 @@
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-storage.js"></script>
-  
+
   <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
-  
+
   <script>
     // Your web app's Firebase configuration
     var firebaseConfig = {
@@ -47,7 +48,7 @@
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
   </script>
-  
+
   <script src="./js/initialize.js"></script>
   <script src="./js/filter.js"></script>
   <script src="./js/script.js"></script>
@@ -86,6 +87,11 @@
             <button class="btn btn-success-soft mt-3" data-toggle="modal" data-target="#shareModal">Share</button>
             <button class="btn btn-info-soft mt-3" data-toggle="modal" data-target="#uploadModal">Upload</button>
             <a class="btn btn-primary-soft mt-3" href="books.html">Available Books</a>
+            <div class="card-footer text-muted">
+              Follow Us on
+              <br>
+              <a href="#"><i class="fa fa-twitter"></i></a>    <a href="#"><i class="fa fa-instagram"></i></a> <a href="#"><i class="fa fa-github"></i></a> 
+            </div>
 
 
             <div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -179,7 +185,7 @@
                       </div>
 
                       <div class="row">
-                        <div class="col-12 col-md-6" >
+                        <div class="col-12 col-md-6">
 
                           <!-- Email -->
                           <div class="form-label-group">
@@ -205,8 +211,8 @@
 
                           <!-- Email -->
                           <div class="form-label-group">
-                            <input type="text" class="form-control form-control-flush" id="level"
-                              placeholder="Level" required />
+                            <input type="text" class="form-control form-control-flush" id="level" placeholder="Level"
+                              required />
                             <label for="level">Level</label>
                           </div>
                         </div>

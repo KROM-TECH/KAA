@@ -56,6 +56,7 @@ $(document).ready(function () {
             .then(result => {
               console.log("Image uploaded!");
               alert("File uploaded!");
+              $('#uploadModal').modal('toggle'); //or  $('#IDModal').modal('hide');
             })
             .catch(error => {
               console.log("Error ==== ", error);
