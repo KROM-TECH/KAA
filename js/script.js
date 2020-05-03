@@ -50,27 +50,54 @@ $(document).ready(function () {
           var file = document.getElementById("book").files[0];
 
 
-          storageReference
+         let uploadTask = storageReference
             .child("books/" + file.name)
             .put(file)
-            .then(result => {
-              console.log("Image uploaded!");
-              alert("File uploaded!");
-              $('#uploadModal').modal('toggle'); //or  $('#IDModal').modal('hide');
-            })
-            .catch(error => {
-              console.log("Error ==== ", error);
-              alert("Something went wrong!");
+
+          uploadTask.on('state_changed', function (snapshot) {
+            var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            console.log('Upload is ' + progress + '% done');
+            let elem = document.getElementById("myBar");
+            let width = progress;
+            var id = setInterval(frame, 1000);
+            $('#uploadModal').modal('hide');
+            $('#progressModal').modal('show');
+            function frame() {
+              if (width >= 100) {
+                $('#progressModal').modal('hide');
+                clearInterval(id);
+                i = 0;
+              } else {
+                width = progress;
+                elem.style.width = width + "%";
+              }}
+          }, function (error) {
+            alert("something went wrong, No vex but abeg reupload")
+          }, function () {
+            // Handle successful uploads on complete
+            // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+              uploadTask.snapshot.ref.getDownloadURL().then(result => {
+                console.log("Image uploaded!");
+                alert("File uploaded!");
+                $('#uploadModal').modal('hide'); //or  $('#IDModal').modal('hide');
+              })
+                .catch(error => {
+                  console.log("Error ==== ", error);
+                  alert("Something went wrong!");
+                });
+              LoadData();
             });
-          LoadData();
+          })
+
+            
         })
-        .catch(function (error) {
-          console.log(error)
-          // $('#operationStatus').html('<div class="alert alert-danger"><strong>Failure!</strong> Employee could not be updated.</div>').delay(2500).fadeOut('slow');
+        // .catch(function (error) {
+        //   console.log(error)
+        //   // $('#operationStatus').html('<div class="alert alert-danger"><strong>Failure!</strong> Employee could not be updated.</div>').delay(2500).fadeOut('slow');
         });
       // }
-    });
-  });
+    // });
+  
 
  
 

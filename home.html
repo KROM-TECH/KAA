@@ -52,6 +52,18 @@
   <script src="./js/initialize.js"></script>
   <script src="./js/filter.js"></script>
   <script src="./js/script.js"></script>
+  <style>
+    #myProgress {
+      width: 100%;
+      background-color: #ddd;
+    }
+  
+    #myBar {
+      width: 0%;
+      height: 30px;
+      background-color: #335eea;
+    }
+  </style>
 
 </head>
 
@@ -93,6 +105,26 @@
               <a href="#"><i class="fa fa-twitter"></i></a>    <a href="#"><i class="fa fa-instagram"></i></a> <a href="#"><i class="fa fa-github"></i></a> 
             </div>
 
+
+            <div class="modal fade" id="progressModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+
+
+                    <div class="card">
+                      <h1>Uploading file</h1>
+                      
+                      <div id="myProgress">
+                        <div id="myBar"></div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
               aria-hidden="true">
@@ -145,7 +177,7 @@
                           <!-- First name -->
                           <div class="form-label-group">
                             <input type="text" class="form-control form-control-flush" id="uploader"
-                              placeholder="Uploader" required />
+                              placeholder="Uploader" required/>
                             <label for="uploader">Your Name / Nickname</label>
                           </div>
 
@@ -155,7 +187,7 @@
                           <!-- Last name -->
                           <div class="form-label-group">
                             <input type="text" class="form-control form-control-flush" id="university"
-                              placeholder="University" required />
+                              placeholder="University" required/>
                             <label for="university">Your University</label>
                           </div>
 
@@ -167,7 +199,7 @@
                           <!-- Email -->
                           <div class="form-label-group">
                             <input type="text" class="form-control form-control-flush" id="bookName"
-                              placeholder="Book Name" required />
+                              placeholder="Book Name" required/>
                             <label for="bookName">Book Name</label>
                           </div>
 
@@ -177,7 +209,7 @@
                           <!-- Password -->
                           <div class="form-label-group">
                             <input type="text" class="form-control form-control-flush" id="bookAuthor"
-                              placeholder="Book Author" required />
+                              placeholder="Book Author" required/>
                             <label for="bookAuthor">book Author</label>
                           </div>
 
@@ -190,7 +222,7 @@
                           <!-- Email -->
                           <div class="form-label-group">
                             <input type="text" class="form-control form-control-flush" id="faculty"
-                              placeholder="Faculty" required />
+                              placeholder="Faculty" required/>
                             <label for="faculty">Faculty</label>
                           </div>
 
@@ -200,7 +232,7 @@
                           <!-- Password -->
                           <div class="form-label-group">
                             <input type="text" class="form-control form-control-flush" id="department"
-                              placeholder="Department" required />
+                              placeholder="Department" required/>
                             <label for="department">Department</label>
                           </div>
 
@@ -212,7 +244,7 @@
                           <!-- Email -->
                           <div class="form-label-group">
                             <input type="text" class="form-control form-control-flush" id="level" placeholder="Level"
-                              required />
+                              required/>
                             <label for="level">Level</label>
                           </div>
                         </div>
@@ -221,7 +253,7 @@
                           <!-- Password -->
                           <div class="form-label-group">
                             <input type="text" class="form-control form-control-flush" id="semester"
-                              placeholder="semester" required />
+                              placeholder="semester" required>
                             <label for="semester">Semester</label>
                           </div>
 
