@@ -52,18 +52,6 @@
   <script src="./js/initialize.js"></script>
   <script src="./js/filter.js"></script>
   <script src="./js/script.js"></script>
-  <style>
-    #myProgress {
-      width: 100%;
-      background-color: #ddd;
-    }
-  
-    #myBar {
-      width: 0%;
-      height: 30px;
-      background-color: #335eea;
-    }
-  </style>
 
 </head>
 
@@ -106,25 +94,6 @@
             </div>
 
 
-            <div class="modal fade" id="progressModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-body">
-
-
-                    <div class="card">
-                      <h1>Uploading file</h1>
-                      
-                      <div id="myProgress">
-                        <div id="myBar"></div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
 
             <div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
               aria-hidden="true">
@@ -266,10 +235,10 @@
                           <!-- Submit -->
                           <div class="custom-upload">
                             <label class="btn btn-block btn-outline-success mt-3 lift" for="book"
-                              data-element="custom-upload-button">Upload Files </label><i
-                              class="fa fa-file-image-o"></i>
+                              data-element="custom-upload-button">Upload Files </label>
+                              <div id="status"></div>
                             <input class="custom-upload__input" id="book" type="file"
-                              data-behaviour="custom-upload-input" value="" required / />
+                              data-behaviour="custom-upload-input" value="" required>
                           </div>
                           <!-- <input class="btn btn-block btn-outline-success mt-3 lift" type="file" id="myFile" name="filename"> -->
                           </input>
