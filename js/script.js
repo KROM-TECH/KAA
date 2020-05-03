@@ -24,11 +24,6 @@ $(document).ready(function () {
       var semester = $('#semester').val();
       var book = $('#book').val().split('\\').pop()
 
-      if (uploader == "" || university == "" || bookName == "" || bookAuthor == "" || faculty == "" || department == "" || level == "" || semester == "" || book == "" ){
-        alert('all files are required na. dont stress us, we also students')
-        window.location = "index.html"
-        break
-      }
 
 
 
@@ -114,7 +109,7 @@ $(document).ready(function () {
       tableRow += '<td class="department">' + document.department + '</td>';
       tableRow += '<td class="level">' + document.level + '</td>';
       tableRow += '<td class="semester">' + document.semester + '</td>';
-      tableRow += '<td class="editEmployee">' + `<a href=${document.book}; download=${file.name}><i class="fa fa-arrow-down"  style="color:green"></i> </a>` + '</td>'
+      tableRow += '<td class="book">' + `<a href=${document.book}; download=${document.bookName}><i class="fa fa-arrow-down"  style="color:green"></i> </a>` + '</td>'
       tableRow += '</tr>';
     });
     $('tbody.tbodyData').html(tableRow);

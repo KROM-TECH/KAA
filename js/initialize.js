@@ -67,7 +67,7 @@ booksRef.get().then(function (querySnapshot) {
         tableRow += '<td class="department">' + document.department + '</td>';
         tableRow += '<td class="level">' + document.level + '</td>';
         tableRow += '<td class="semester">' + document.semester + '</td>';
-        tableRow += '<td class="editEmployee">' + `<a href=${url}; type="download" download="proposed_file_name"><i class="fa fa-arrow-down"  style="color:green"></i> </a>` + '</td>'
+      tableRow += '<td class="book">' + `<a href=${url}; type="download" download=${document.bookName}><i class="fa fa-arrow-down"  style="color:green"></i> </a>` + '</td>'
         tableRow += '</tr>';
         $('tbody.tbodyData').append(tableRow);
 
