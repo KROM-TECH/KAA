@@ -76,35 +76,33 @@
   </section>
 
   <div class="container">
+<div class="row text-center">
 
-    <!-- button to create an employee -->
-    <!-- <button class="btn btn-success" id="createEmployee"> 
-               Create Employee <i class="fa fa-plus" aria-hidden="true"></i>
-           </button> -->
+      <!-- input to seach for an employee -->
+      <input class="btn btn-default" placeholder="Search by " id="searchArchive"> </input>
 
     <!-- Filters drop down -->
-    <!-- <div class="btn-group pull-right">
+    <div class="btn-group col">
                <button type="button" 
                        class="btn btn-default dropdown-toggle" 
                        data-toggle="dropdown" 
                        aria-haspopup="true" 
-                       aria-expanded="false">
-               Default Employee Filters <i class="fa fa-filter" aria-hidden="true"></i>
+                       aria-expanded="false"
+                       id="searchFilter">
+               Search by
                </button>
-               <div class="dropdown-menu">
-                   <a class="dropdown-item" id="onlyMalesFilter"> Male only</a>
-                   <a class="dropdown-item" id="fullTimeFilter">  Full-time only</a>
-                   <a class="dropdown-item" id="olderThenFilter"> Older than 30</a>
-                   <a class="dropdown-item" id="ageBetweenFilter"> Older than 35, but younger than 50</a>
-                   <a class="dropdown-item" id="yearsOfExperienceFilter"> Female and 5 to 10 years of experience</a>
-                   <div class="dropdown-divider"></div>
-                   <a class="dropdown-item" id="clearFilter"> Clear Filter</a>
+               <div class="dropdown-menu" id="dropDown">
+                   <a class="dropdown-item" id="searchUploader">Uploader</a>
+                   <a class="dropdown-item" id="searchUniversity">University</a>
+                   <a class="dropdown-item" id="searcBookName">Book Name</a>
+                   <a class="dropdown-item" id="searchBookAuthor">Book Author</a>
+                   <a class="dropdown-item" id="searchFaculty">Faculty</a>
+                   <a class="dropdown-item" id="searchDepartment">Department</a>
                </div>
-           </div> -->
+           </div>
 
-    <!-- input to seach for an employee -->
-    <input class="btn btn-default  pull-right" placeholder="Search by name..." id="searchEmployee"> </input>
 
+</div>
     <div id="operationStatus"></div>
 
     <div class="container" style="overflow-x: scroll;">

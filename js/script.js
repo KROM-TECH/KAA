@@ -55,12 +55,13 @@ $(document).ready(function () {
           .put(file)
 
         uploadTask.on('state_changed', function (snapshot) {
-          var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          console.log('Upload is ' + progress + '% done');
+          const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          // console.log('Upload is ' + progress + '% done');
           document.getElementById("status").innerHTML = Math.floor(progress) + '% uploaded'
 
         }, function (error) {
           alert("something went wrong, No vex but abeg reupload")
+          console.log(error)
         }, function () {
           // Handle successful uploads on complete
           // For instance, get the download URL: https://firebasestorage.googleapis.com/...
@@ -91,15 +92,15 @@ $(document).ready(function () {
 
 
 
-$("#searchEmployee").change(function () {
-  console.log('You entered: ', $(this).val());
-  //Get the Employee Data
-  var searchValue = $(this).val()
-  booksRef.where("uploader", "==", searchValue)
-    .onSnapshot(function (querySnapshot) {
-      LoadTableData(querySnapshot)
-    });
-});
+// $("#searchEmployee").change(function () {
+//   console.log('You entered: ', $(this).val());
+//   //Get the Employee Data
+//   var searchValue = $(this).val()
+//   booksRef.where("uploader", "==", searchValue)
+//     .onSnapshot(function (querySnapshot) {
+//       LoadTableData(querySnapshot)
+//     });
+// });
 
 
 

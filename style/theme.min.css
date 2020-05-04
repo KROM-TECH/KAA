@@ -3303,7 +3303,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
   white-space: nowrap
 }
 
-.dropdown-toggle::after {
+/* .dropdown-toggle::after {
   display: inline-block;
   margin-left: .255em;
   vertical-align: .255em;
@@ -3316,7 +3316,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 
 .dropdown-toggle:empty::after {
   margin-left: 0
-}
+} */
 
 .dropdown-menu {
   position: absolute;
@@ -13605,12 +13605,12 @@ a.card-body:hover, a.card-footer:hover, a.card-meta:hover, a.card:hover {
   letter-spacing: .08em
 }
 
-.dropdown-toggle::after {
+/* .dropdown-toggle::after {
   font-family: Feather;
   vertical-align: middle;
   border: none!important;
   content: "\e92e"
-}
+} */
 
 .dropright>.dropdown-toggle::after {
   content: "\e930"
