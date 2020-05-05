@@ -22,7 +22,7 @@
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-storage.js"></script>
 
   <!-- TODO: Add SDKs for Firebase products that you want to use
       https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -51,40 +51,38 @@
 
   <link rel="manifest" href="/manifest.json">
 
- <!-- Scroll bar style -->
-<style>
-  body{
+  <!-- Scroll bar style -->
+  <style>
+    body {
       /* IE */
-  scrollbar-base-color: transparent;
-  scrollbar-base-color: transparent;
-  scrollbar-3dlight-color: transparent;
-  scrollbar-highlight-color: transparent;
-  scrollbar-track-color: transparent;
-  scrollbar-arrow-color: transparent;
-  scrollbar-shadow-color: transparent;
-  scrollbar-base-color: transparent;
-  scrollbar-base-color: transparent;
-  scrollbar-3dlight-color: transparent;
-  scrollbar-highlight-color: transparent;
-  scrollbar-track-color: transparent;
-  scrollbar-arrow-color: transparent;
-  scrollbar-shadow-color: transparent;
-  }
-  #style-7::-webkit-scrollbar-track
-{
-display: none;
-}
+      scrollbar-base-color: transparent;
+      scrollbar-base-color: transparent;
+      scrollbar-3dlight-color: transparent;
+      scrollbar-highlight-color: transparent;
+      scrollbar-track-color: transparent;
+      scrollbar-arrow-color: transparent;
+      scrollbar-shadow-color: transparent;
+      scrollbar-base-color: transparent;
+      scrollbar-base-color: transparent;
+      scrollbar-3dlight-color: transparent;
+      scrollbar-highlight-color: transparent;
+      scrollbar-track-color: transparent;
+      scrollbar-arrow-color: transparent;
+      scrollbar-shadow-color: transparent;
+    }
 
-#style-7::-webkit-scrollbar
-{
-display: none;
-}
+    #style-7::-webkit-scrollbar-track {
+      display: none;
+    }
 
-#style-7::-webkit-scrollbar-thumb
-{
-display: none;
-}
-</style>
+    #style-7::-webkit-scrollbar {
+      display: none;
+    }
+
+    #style-7::-webkit-scrollbar-thumb {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -111,33 +109,29 @@ display: none;
   </section>
 
   <div class="container">
-<div class="row text-center" style="overflow-x: scroll;" id="style-7">
+    <div class="row text-center" style="overflow-x: scroll;" id="style-7">
 
       <!-- input to seach for an employee -->
-      <input class="btn btn-default" placeholder="Search by " id="searchArchive"> </input>
+      <input class="btn btn-default col" placeholder="Search by " id="searchArchive"> </input>
 
-    <!-- Filters drop down -->
-    <div class="btn-group col">
-               <button type="button" 
-                       class="btn btn-default dropdown-toggle" 
-                       data-toggle="dropdown" 
-                       aria-haspopup="true" 
-                       aria-expanded="false"
-                       id="searchFilter">
-               Search by
-               </button>
-               <div class="dropdown-menu" id="dropDown">
-                   <a class="dropdown-item" id="searchUploader">Uploader</a>
-                   <a class="dropdown-item" id="searchUniversity">University</a>
-                   <a class="dropdown-item" id="searcBookName">Book Name</a>
-                   <a class="dropdown-item" id="searchBookAuthor">Book Author</a>
-                   <a class="dropdown-item" id="searchFaculty">Faculty</a>
-                   <a class="dropdown-item" id="searchDepartment">Department</a>
-               </div>
-           </div>
+      <!-- Filters drop down -->
+      <div class="btn-group col">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false" id="searchFilter">
+          Search by
+        </button>
+        <div class="dropdown-menu" id="dropDown">
+          <a class="dropdown-item" id="searchUploader">Uploader</a>
+          <a class="dropdown-item" id="searchUniversity">University</a>
+          <a class="dropdown-item" id="searcBookName">Book Name</a>
+          <a class="dropdown-item" id="searchBookAuthor">Book Author</a>
+          <a class="dropdown-item" id="searchFaculty">Faculty</a>
+          <a class="dropdown-item" id="searchDepartment">Department</a>
+        </div>
+      </div>
 
 
-</div>
+    </div>
 
     <div class="container" style="overflow-x: scroll;" id="style-7">
       <table class="table table-striped">
@@ -163,7 +157,7 @@ display: none;
 
 
   <!-- Js--Scripts -->
-
+  <script src="./js/app.js"></script>
 
 </body>
 

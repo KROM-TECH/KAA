@@ -27,7 +27,7 @@ $(document).ready(function () {
 
 
 
-    var docuName = uploader + "." + bookName.charAt(0);
+    var docuName = uploader + "." + book.charAt(0) + '.' + book.slice(-1);
     var sfDocRef = db.collection("books").doc(docuName);
     sfDocRef.set({
       uploader: uploader,

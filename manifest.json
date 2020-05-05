@@ -2,21 +2,36 @@
   "short_name": "KAA",
   "name": "Kromtech Academic Archive",
   "description": "All your Academic resources in one place",
+    "start_url": "/index.html",
+    "background_color": "#335eea",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#335eea",
   "icons": [
     {
       "src": "/img/logo.svg",
       "type": "image/svg",
-      "sizes": "192x192"
+      "sizes": "72x72"
+    },
+    {
+      "src": "/img/logo.svg",
+      "type": "image/svg",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/img/logo.svg",
+      "type": "image/svg",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/img/logo.svg",
+      "type": "image/svg",
+      "sizes": "144x144"
     },
     {
       "src": "/img/logo.svg",
       "type": "image/svg",
       "sizes": "512x512"
     }
-  ],
-  "start_url": "/index.html",
-  "background_color": "#335eea",
-  "display": "standalone",
-  "scope": "/",
-  "theme_color": "#335eea"
+  ]
 }
