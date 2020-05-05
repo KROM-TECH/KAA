@@ -1,0 +1,22 @@
+{
+  "short_name": "KAA",
+  "name": "Kromtech Academic Archive",
+  "description": "All your Academic resources in one place",
+  "icons": [
+    {
+      "src": "/img/logo.svg",
+      "type": "image/svg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/logo.svg",
+      "type": "image/svg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#335eea",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#335eea"
+}

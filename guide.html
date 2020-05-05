@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAA</title>
+  <script type="text/javascript"
+    src="https://platform-api.sharethis.com/js/sharethis.js#property=5eab29747525e90012616b88&product=inline-share-buttons"
+    async="async"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/7672e5925f.js"></script>
+
+  <link rel="stylesheet" href="./style/theme.min.css">
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+  <style>
+    ol {
+      list-style: none;
+      counter-reset: my-awesome-counter;
+    }
+
+    li {
+      counter-increment: my-awesome-counter;
+      margin: 0.25rem;
+    }
+
+    li::before {
+      content: counter(my-awesome-counter);
+      background: #335eea;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      display: inline-block;
+      line-height: 2rem;
+      color: white;
+      text-align: center;
+      margin-right: 0.5rem;
+    }
+
+    ol ol li::before {
+      background: #DE51FF;
+    }
+
+    ol ol ol li::before {
+      background: #EE9EFF;
+    }
+  </style>
+
+  <link rel="manifest" href="/manifest.json">
+</head>
+
+<body>
+  <section class="pt-4 pt-md-11">
+    <div class="container">
+      <div class="row align-items-center">
+        <section>
+          <div class="container ">
+            <p class="display-4 text-primary text-center"> The Guide</p> <br>
+            <div class="d-flex justify-items-start  m-2">
+              <span class="row text-primary">How to Upload</span>
+            </div>
+            <div class="">
+              <ol class="m-0">
+                <li>Click on the Upload button</li>
+                <li>Fill all Fields. !This is very Compulsory or it wont be saved o the server</li>
+                <li>Click on the Sumbit button</li>
+                <li>Wait till the Upload is complete before existing the site</li>
+              </ol>
+            </div>
+            <span class="row text-primary m-1">Note</span>
+            <p>At the moment you can only upload file in your physical device. <br> Meaning you can't upload directly
+              from your google drive</p>
+          </div>
+        </section>
+
+
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+<h3 class="text-center text-primary">All Comments and Criticism are welcome</h3>
+  <form class="text-center">
+    <div class="form-label-group">
+      <input type="text" class="form-control form-control-flush" id="cardName" placeholder="Name">
+      <label for="cardName">Name</label>
+    </div>
+    <div class="form-label-group">
+      <input type="email" class="form-control form-control-flush" id="cardEmail" placeholder="Email">
+      <label for="cardEmail">Email</label>
+    </div>
+    <div class="form-label-group">
+      <input type="text" class="form-control form-control-flush" id="cardPassword" placeholder="Password">
+      <label for="cardPassword">input</label>
+    </div>
+    <div class="mt-6">
+      <button class="btn btn-block text-center btn-success lift" id="sub" type="submit">
+        Submit
+      </button>
+    </div>
+  </form>
+
+</body>
+<script>
+  const submit = document.querySelector("#sub");
+  submit.addEventListener('click', function (e) {
+    e.preventDefault()
+  })
+
+</script>
+
+</html>
