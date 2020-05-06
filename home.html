@@ -5,9 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KAA</title>
-  <script type="text/javascript"
-    src="https://platform-api.sharethis.com/js/sharethis.js#property=5eab29747525e90012616b88&product=inline-share-buttons"
-    async="async"></script>
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -23,36 +21,11 @@
 
   <link rel="stylesheet" href="./style/theme.min.css">
 
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-storage.js"></script>
+ 
 
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
 
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyAtrKgkzn0EQub3tJ_2Q_0uoK3zMfqn-20",
-      authDomain: "kromtech-archive.firebaseapp.com",
-      databaseURL: "https://kromtech-archive.firebaseio.com",
-      projectId: "kromtech-archive",
-      storageBucket: "kromtech-archive.appspot.com",
-      messagingSenderId: "147947718015",
-      appId: "1:147947718015:web:c1afcf6e27d8a3a8e2c64a",
-      measurementId: "G-7C2TXMJXZR"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-  </script>
-
-  <script src="./js/initialize.js"></script>
-  <script src="./js/filter.js"></script>
-  <script src="./js/script.js"></script>
   <link rel="manifest" href="/manifest.json">
+  <script src="./js/app.js"></script>
 
 </head>
 
@@ -269,6 +242,39 @@
     </div> <!-- / .container -->
   </section>
 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-storage.js"></script>
+  
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+  
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAtrKgkzn0EQub3tJ_2Q_0uoK3zMfqn-20",
+      authDomain: "kromtech-archive.firebaseapp.com",
+      databaseURL: "https://kromtech-archive.firebaseio.com",
+      projectId: "kromtech-archive",
+      storageBucket: "kromtech-archive.appspot.com",
+      messagingSenderId: "147947718015",
+      appId: "1:147947718015:web:c1afcf6e27d8a3a8e2c64a",
+      measurementId: "G-7C2TXMJXZR"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+  
+  <script src="./js/initialize.js"></script>
+  <script src="./js/filter.js"></script>
+  <script src="./js/script.js"></script>
+
+    <script type="text/javascript"
+      src="https://platform-api.sharethis.com/js/sharethis.js#property=5eab29747525e90012616b88&product=inline-share-buttons"
+      async="async"></script>
   <script>
     $(function () {
       function init() {
