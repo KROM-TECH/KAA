@@ -7,7 +7,6 @@ const asset = [
   '/books.html',
   '/home.html',
   '/js/app.js',
-  '/manifest.json',
   '/img/kaa.svg',
   '/img/logo.svg',
   '/js/filter.js',
