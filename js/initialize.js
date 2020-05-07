@@ -46,12 +46,12 @@ var booksRef = db.collection("books");
 
 
 booksRef.get().then(function (querySnapshot) {
-  console.log("SHOW-FILE called!");
+  // console.log("SHOW-FILE called!");
 
   var storageReference = firebase.storage().ref();
   querySnapshot.forEach(function (doc) {
     var document = doc.data();
-  console.log(document)
+  // console.log(document)
   storageReference
     .child("books/" + `${document.book}`)
     .getDownloadURL()

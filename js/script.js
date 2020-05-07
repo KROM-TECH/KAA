@@ -1,3 +1,4 @@
+
 // Initialize Cloud Firestore through Firebase
 var db = firebase.firestore();
 var booksRef = db.collection("books");
