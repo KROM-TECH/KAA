@@ -1,5 +1,5 @@
-const staticCacheName = 'site-static-v1';
-const dynamicCacheName = 'site-dynamic-v1';
+const staticCacheName = 'site-static-v2';
+const dynamicCacheName = 'site-dynamic-v2';
 
 const asset = [
   '/',
@@ -20,10 +20,10 @@ const asset = [
 self.addEventListener('install', (evt) => {
   // console.log('service worker has been installed' )
 
-  console.log(evt);
+  // console.log(evt);
   evt.waitUntil(
     caches.open(staticCacheName).then(cache => {
-      console.log('caching stuff');
+      // console.log('caching stuff');
       cache.addAll(asset)
     }).catch((err)=>{
       console.log(err)

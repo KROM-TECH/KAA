@@ -1,42 +1,40 @@
 {
   "short_name": "KAA",
   "name": "Kromtech Academic Archive",
-  "description": "All your Academic resources in one place",
-    "start_url": "/home.html",
-    "background_color": "#335eea",
-    "display": "standalone",
-    "scope": "/",
-    "Theme_color": "#335eea",
+  "description": "One stop for all your academic resources",
   "icons": [
+
     {
       "src": "/img/72px.png",
-      "type": "image/png",
-      "sizes": "72x72"
+      "sizes": "72x72",
+      "type": "image/png"
     },
     {
       "src": "/img/96px.png",
-      "type": "image/png",
-      "sizes": "96x96"
-    },
-    {
-      "src": "/img/128px.png",
-      "type": "image/png",
-      "sizes": "128x128"
-    },
-    {
-      "src": "/img/192px.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "96x96",
+      "type": "image/png"
     },
     {
       "src": "/img/144px.png",
-      "type": "image/png",
-      "sizes": "144x144"
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/192px.png",
+      "sizes": "192x192",
+      "type": "image/png"
     },
     {
       "src": "/img/512px.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "type": "image/png"
     }
-  ]
+  ],
+  "start_url": "/home.html",
+  "background_color": "#335eea",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#3367D6"
 }
+
+
