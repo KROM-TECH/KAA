@@ -15,37 +15,37 @@ $(document).ready(function () {
             //Get the Employee Data
             if (selText == 'Uploader') {
                 var searchValue = $(this).val()
-                booksRef.where("uploader", "==", searchValue)
+                booksRef.where(`uploader`, "==", ((searchValue + "\uf8ff").toLowerCase()))
                     .onSnapshot(function (querySnapshot) {
                         LoadTableData(querySnapshot)
                     });
             } else if (selText == 'University') {
                 var searchValue = $(this).val()
-                booksRef.where("university", "==", searchValue)
+                booksRef.where(`university`, "==", ((searchValue + "\uf8ff").toLowerCase()))
                     .onSnapshot(function (querySnapshot) {
                         LoadTableData(querySnapshot)
                     });
             } else if (selText == 'Book Name') {
                 var searchValue = $(this).val()
-                booksRef.where("bookName", "==", searchValue)
+                booksRef.where(`bookName`, "==", ((searchValue + "\uf8ff").toLowerCase()))
                     .onSnapshot(function (querySnapshot) {
                         LoadTableData(querySnapshot)
                     });
             } else if (selText == 'Book Author') {
                 var searchValue = $(this).val()
-                booksRef.where("bookAuthor", "==", searchValue)
+                booksRef.where(`bookAuthor`, "==", ((searchValue + "\uf8ff").toLowerCase()))
                     .onSnapshot(function (querySnapshot) {
                         LoadTableData(querySnapshot)
                     });
             } else if (selText == 'Faculty') {
                 var searchValue = $(this).val()
-                booksRef.where("faculty", "==", searchValue)
+                booksRef.where(`faculty`, "==", ((searchValue + "\uf8ff").toLowerCase()))
                     .onSnapshot(function (querySnapshot) {
                         LoadTableData(querySnapshot)
                     });
             } else if (selText == 'Department') {
                 var searchValue = $(this).val()
-                booksRef.where("department", "==", searchValue)
+                booksRef.where(`department`, "==", ((searchValue + "\uf8ff").toLowerCase()))
                     .onSnapshot(function (querySnapshot) {
                         LoadTableData(querySnapshot)
                     });
