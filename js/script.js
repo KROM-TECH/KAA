@@ -25,6 +25,8 @@ $(document).ready(function () {
     var semester = $('#semester').val();
     var book = $('#book').val().split('\\').pop()
 
+    if(uploader == "" )
+
 
 
 
