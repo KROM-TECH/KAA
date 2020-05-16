@@ -16,6 +16,7 @@ $(document).ready(function () {
     e.preventDefault();
     //employee form values
     var uploader = $("#uploader").val();
+    var email = $("#email").val();
     var university = $("#university").val();
     var bookName = $("#bookName").val();
     var bookAuthor = $("#bookAuthor").val();
@@ -25,7 +26,10 @@ $(document).ready(function () {
     var semester = $('#semester').val();
     var book = $('#book').val().split('\\').pop()
 
-    if(uploader == "" )
+    if(uploader == "" || university == "" || bookAuthor =="" || bookName == "" || faculty == "" || department == "" || level == "" || semester == "" || book == "" || email == "" ){
+      alert('All fields are required before upload')
+      location.reload()
+    }
 
 
 
@@ -34,6 +38,7 @@ $(document).ready(function () {
     var sfDocRef = db.collection("books").doc(docuName);
     sfDocRef.set({
       uploader: uploader,
+      email: email,
       university: university,
       bookName: bookName,
       bookAuthor: bookAuthor,

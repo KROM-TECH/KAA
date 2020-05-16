@@ -13077,7 +13077,6 @@ a.badge-gray-700-soft:focus, a.badge-gray-700-soft:hover {
 
 .btn:not([class*=btn-outline]) {
   border-color: transparent!important;
-      margin-bottom: 5rem;
 }
 
 .btn-white {
