@@ -15,15 +15,15 @@ $(document).ready(function () {
   $('#submit').click(function (e) {
     e.preventDefault();
     //employee form values
-    var uploader = $("#uploader").val();
+    var uploader = $("#uploader").val().toLowerCase();
     var email = $("#email").val();
-    var university = $("#university").val();
-    var bookName = $("#bookName").val();
-    var bookAuthor = $("#bookAuthor").val();
-    var faculty = $("#faculty").val();
-    var department = $("#department").val();
-    var level = $('#level').val();
-    var semester = $('#semester').val();
+    var university = $("#university").val().toLowerCase();
+    var bookName = $("#bookName").val().toLowerCase();
+    var bookAuthor = $("#bookAuthor").val().toLowerCase();
+    var faculty = $("#faculty").val().toLowerCase();
+    var department = $("#department").val().toLowerCase();
+    var level = $('#level').val().toLowerCase();
+    var semester = $('#semester').val().toLowerCase();
     var book = $('#book').val().split('\\').pop()
 
     if(uploader == "" || university == "" || bookAuthor =="" || bookName == "" || faculty == "" || department == "" || level == "" || semester == "" || book == "" || email == "" ){
