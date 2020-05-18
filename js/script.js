@@ -88,6 +88,7 @@ $(document).ready(function () {
 
 
   })
+  
   // .catch(function (error) {
   //   console.log(error)
   //   // $('#operationStatus').html('<div class="alert alert-danger"><strong>Failure!</strong> Employee could not be updated.</div>').delay(2500).fadeOut('slow');

@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="one stop location for all your academic needs">
+  <meta name="description" content="one stop location for all your academic needs">
   <meta name="theme-color" content="#335eea">
-    <link rel="icon" href="/img/72px.ico">
+  <link rel="icon" href="/img/72px.ico">
   <link rel="apple-touch-icon" href="/img/192px.png">
   <title>KAA</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   <link rel="stylesheet" href="./style/theme.min.css">
+  <link rel="stylesheet" href="./style/theme.min.css">
 
   <link rel="manifest" crossorigin="use-credentials" href="/manifest.json">
 
@@ -50,17 +50,93 @@
             <button class="btn btn-success-soft mt-3" data-toggle="modal" data-target="#shareModal">Share</button>
             <button class="btn btn-info-soft mt-3" data-toggle="modal" data-target="#uploadModal">Upload</button>
             <a class="btn btn-primary-soft mt-3" href="books.html">Available Books</a>
+            <button class="btn btn-info-soft mt-3" data-toggle="modal" data-target="#requestModal">Request a
+              book</button>
             <div class="card-footer text-muted">
               Follow Us on
               <br>
-              <a href="https://twitter.com/KROMTECH1"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-instagram"></i></a> <a
-                href="https://github.com/krom-tech"><i class="fa fa-github"></i></a>
-                <br>
-                You can also support us on <a href="https://dashboard.flutterwave.com/donate/9dbk6ywhxjl1">Rave</a>
+              <a href="https://twitter.com/KROMTECH1"><i class="fa fa-twitter"></i></a> <a href="#"><i
+                  class="fa fa-instagram"></i></a> <a href="https://github.com/krom-tech"><i
+                  class="fa fa-github"></i></a>
+              <br>
+              You can also support us on <a href="https://dashboard.flutterwave.com/donate/9dbk6ywhxjl1">Rave</a>
             </div>
 
 
+            <!-- Request Modal -->
+            <div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
 
+                    <!-- Close -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+
+                    <!-- Image -->
+                    <div class="text-center">
+                      <img src="./img/logo.jpeg" alt="..." class="img-fluid mb-0 ml-5" style="width: 200px;">
+                    </div>
+
+
+                    <!-- Text -->
+                    <p class="font-size-lg text-center text-muted mb-6 mb-md-8">
+                      If You in need of a book not available on the archive, you can make a request and we will be in
+                      touch
+                    </p>
+                    <form name="submit-to-google-sheet">
+                      <div class="row">
+                        <div class="col-12">
+                          <!-- Email -->
+                          <div class="form-label-group">
+                            <input type="Email" class="form-control form-control-flush" name="Email" id="reqEmail"
+                              placeholder="Single Word" min="3" required />
+                            <label for="reqEmail">Email</label>
+                          </div>
+                        </div>
+
+                        <div class="col-12">
+                          <!-- Book Name -->
+                          <div class="form-label-group">
+                            <input type="text" class="form-control form-control-flush" name="Book Name" id="reqBName"
+                              placeholder="Single Word" min="3" required />
+                            <label for="reqBName">Book Name</label>
+                          </div>
+                        </div>
+
+                        <div class="col-12">
+                          <!-- Book Author -->
+                          <div class="form-label-group">
+                            <input type="text" class="form-control form-control-flush" name="Book Author" id="reqBAuthor"
+                              placeholder="Single Word" min="3" required />
+                            <label for="reqBAuthor">Book Author</label>
+                          </div>
+                        </div>
+
+                        <div class="col-12">
+                          <!-- Specification -->
+                          <div class="form-label-group">
+                            <input type="text" class="form-control form-control-flush" name="Spec" id="reqSpec"
+                              placeholder="Single Word" min="3" required />
+                            <label for="reqSpec">Other Specification</label>
+                          </div>
+                        </div>
+                        <button class="btn btn-block btn-primary mt-3 lift" type="submit" id="req">
+                          Submit
+                        </button>
+
+                      </div>
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Request Modal ends -->
+
+            <!-- Share Modal -->
             <div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
               aria-hidden="true">
               <div class="modal-dialog" role="document">
@@ -77,7 +153,9 @@
                 </div>
               </div>
             </div>
+            <!-- Share Modal Ends -->
 
+            <!-- Upload Modal -->
             <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
               aria-hidden="true">
               <div class="modal-dialog" role="document">
@@ -130,11 +208,11 @@
                           </div>
 
                         </div>
-                                                <div class="form-label-group col-12">
-                                                  <input type="text" class="form-control form-control-flush" id="email" placeholder="Your Data is Safe" min="3"
-                                                    required />
-                                                  <label for="email">Your Email</label>
-                                                </div>
+                        <div class="form-label-group col-12">
+                          <input type="text" class="form-control form-control-flush" id="email"
+                            placeholder="Your Data is Safe" min="3" required />
+                          <label for="email">Your Email</label>
+                        </div>
                       </div>
                       <div class="row">
                         <div class="col-12 col-md-6">
@@ -235,31 +313,52 @@
                 </div>
               </div>
             </div>
+            <!-- Upload Modal Ends -->
           </div>
         </div>
       </div> <!-- / .row -->
     </div> <!-- / .container -->
   </section>
 
-    <script src="./js/app.js"></script>
+ <!-- JavaScript Codes -->
+
+
+  <script src="./js/app.js"></script>
   <script src="js/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
   <script src="https://use.fontawesome.com/7672e5925f.js"></script>
-  
- 
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz3hv0eWMxzUQimO7hsOq0A6STuyQ07ghqUg_3h44NBdLWG8mI/exec';
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(function (success) {
+              document.getElementById('req').innerHTML = 'Sent'
+              location.reload()
+
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-storage.js"></script>
-  
+
   <!-- TODO: Add SDKs for Firebase products that you want to use
           https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
-  
+
   <script>
     // Your web app's Firebase configuration
     var firebaseConfig = {
@@ -276,10 +375,10 @@
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
   </script>
-  
+
 
   <script src="./js/script.js"></script>
-  
+
   <script type="text/javascript"
     src="https://platform-api.sharethis.com/js/sharethis.js#property=5eab29747525e90012616b88&product=inline-share-buttons"
     async="async"></script>
@@ -299,8 +398,7 @@
       init()
     });
   </script>
-  
-  <script src="./js/app.js"></script>
+
 </body>
 
 </html>
