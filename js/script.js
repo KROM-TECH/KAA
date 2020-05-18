@@ -88,7 +88,7 @@ $(document).ready(function () {
 
 
   })
-  
+
   // .catch(function (error) {
   //   console.log(error)
   //   // $('#operationStatus').html('<div class="alert alert-danger"><strong>Failure!</strong> Employee could not be updated.</div>').delay(2500).fadeOut('slow');
@@ -127,16 +127,16 @@ function LoadTableData(querySnapshot) {
   querySnapshot.forEach(function (doc) {
     var document = doc.data();
     tableRow += '<tr>';
-    tableRow += '<td class="uploader">' + document.uploader + '</td>';
-    tableRow += '<td class="university">' + document.university + '</td>';
-    tableRow += '<td class="bookName">' + document.bookName + '</td>';
-    tableRow += '<td class="bookAuthor">' + document.bookAuthor + '</td>';
-    tableRow += '<td class="faculty">' + document.faculty + '</td>';
-    tableRow += '<td class="department">' + document.department + '</td>';
-    tableRow += '<td class="level">' + document.level + '</td>';
-    tableRow += '<td class="semester">' + document.semester + '</td>';
+    tableRow += '<td class="uploader">' + escape(document.uploader) + '</td>';
+    tableRow += '<td class="university">' + escape(document.university) + '</td>';
+    tableRow += '<td class="bookName">' + escape(document.bookName) + '</td>';
+    tableRow += '<td class="bookAuthor">' + escape(document.bookAuthor) + '</td>';
+    tableRow += '<td class="faculty">' + escape(document.faculty) + '</td>';
+    tableRow += '<td class="department">' + escape(document.department) + '</td>';
+    tableRow += '<td class="level">' + escape(document.level) + '</td>';
+    tableRow += '<td class="semester">' + escape(document.semester) + '</td>';
     tableRow += '<td class="book">' + `<a href=${document.book}; download=${document.bookName}><i class="fa fa-arrow-down"  style="color:green"></i> </a>` + '</td>'
     tableRow += '</tr>';
   });
-  $('tbody.tbodyData').html(tableRow);
+  $('tbody.tbodyData').html(tableRow.split("%20").join(" ").split("%26").join("&").split("%2C").join(","));
 }

@@ -5,10 +5,10 @@ var booksRef = db.collection("books");
 
 
 //  booksRef.doc("1").set({
-//      uploader: "Harith", 
-//      university: "university of lagos", 
+//      uploader: "Harith",
+//      university: "university of lagos",
 //      bookName: "stuff",
-//      bookAuthor: "Ben 10", 
+//      bookAuthor: "Ben 10",
 //      faculty: 'Engineering',
 //      department: "systems",
 //      level: 200,
@@ -17,10 +17,10 @@ var booksRef = db.collection("books");
 //  });
 
 //  booksRef.doc("2").set({
-//      uploader: "Heritage", 
-//      university: "Unversity of Ibadan", 
+//      uploader: "Heritage",
+//      university: "Unversity of Ibadan",
 //      bookName: "I hate school",
-//      bookAuthor: "hard guy", 
+//      bookAuthor: "hard guy",
 //      faculty: 'Engineering',
 //      department: "chemical",
 //      level: 200,
@@ -29,10 +29,10 @@ var booksRef = db.collection("books");
 //  });
 
 //  booksRef.doc("3").set({
-//      uploader: "Deji", 
-//      university: "university of abuja", 
+//      uploader: "Deji",
+//      university: "university of abuja",
 //      bookName: "Their Daddy",
-//      bookAuthor: "Naruto uzumaki", 
+//      bookAuthor: "Naruto uzumaki",
 //      faculty: 'Engineering',
 //      department: "met&mat",
 //      level: 200,
@@ -59,17 +59,17 @@ booksRef.get().then(function (querySnapshot) {
 
         var tableRow = '';
         tableRow += '<tr>';
-        tableRow += '<td class="uploader">' + document.uploader + '</td>';
-        tableRow += '<td class="university">' + document.university + '</td>';
-        tableRow += '<td class="bookName">' + document.bookName + '</td>';
-        tableRow += '<td class="bookAuthor">' + document.bookAuthor + '</td>';
-        tableRow += '<td class="faculty">' + document.faculty + '</td>';
-        tableRow += '<td class="department">' + document.department + '</td>';
-        tableRow += '<td class="level">' + document.level + '</td>';
-        tableRow += '<td class="semester">' + document.semester + '</td>';
-      tableRow += '<td class="book">' + `<a href=${url}; type="download" download=${document.bookName}><i class="fa fa-arrow-down"  style="color:green"></i> </a>` + '</td>'
+        tableRow += '<td class="uploader">' + escape(document.uploader) + '</td>';
+        tableRow += '<td class="university">' + escape(document.university) + '</td>';
+        tableRow += '<td class="bookName">' + escape(document.bookName) + '</td>';
+        tableRow += '<td class="bookAuthor">' + escape(document.bookAuthor) + '</td>';
+        tableRow += '<td class="faculty">' + escape(document.faculty) + '</td>';
+        tableRow += '<td class="department">' + escape(document.department) + '</td>';
+        tableRow += '<td class="level">' + escape(document.level) + '</td>';
+        tableRow += '<td class="semester">' + escape(document.semester) + '</td>';
+        tableRow += '<td class="book">' + `<a href=${document.book}; download=${document.bookName}><i class="fa fa-arrow-down"  style="color:green"></i> </a>` + '</td>'
         tableRow += '</tr>';
-        $('tbody.tbodyData').append(tableRow);
+        $('tbody.tbodyData').append(tableRow.split("%20").join(" ").split("%26").join("&").split("%2C").join(","));
 
     }).catch(error => {
       // alert("Something went wrong!");
