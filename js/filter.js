@@ -50,18 +50,6 @@ $(document).ready(function () {
                         LoadTableData(querySnapshot)
                     });
             };
-            async function lazyLoad() {
-                const scrollIsAtTheBottom = (document.documentElement.scrollHeight - window.innerHeight) === window.scrollY;
-                if (scrollIsAtTheBottom) {
-                    const lastNameOfLastPerson = rowsPeople.lastChild.firstElementChild.textContent;
-
-                    rowsPeople.innerHTML += await searchByName({
-                        search: textBoxSearch.value,
-                        lastNameOfLastPerson: lastNameOfLastPerson
-                    });
-                }
-            }
-            window.addEventListener('scroll', lazyLoad);
         });
     });
 
