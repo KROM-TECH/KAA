@@ -127,14 +127,14 @@ function LoadTableData(querySnapshot) {
   querySnapshot.forEach(function (doc) {
     var document = doc.data();
     tableRow += '<tr>';
-    tableRow += '<td class="uploader">' + escape(document.uploader) + '</td>';
-    tableRow += '<td class="university">' + escape(document.university) + '</td>';
-    tableRow += '<td class="bookName">' + escape(document.bookName) + '</td>';
-    tableRow += '<td class="bookAuthor">' + escape(document.bookAuthor) + '</td>';
-    tableRow += '<td class="faculty">' + escape(document.faculty) + '</td>';
-    tableRow += '<td class="department">' + escape(document.department) + '</td>';
-    tableRow += '<td class="level">' + escape(document.level) + '</td>';
-    tableRow += '<td class="semester">' + escape(document.semester) + '</td>';
+    tableRow += '<td class="uploader">' + encodeURIComponent(document.uploader) + '</td>';
+    tableRow += '<td class="university">' + encodeURIComponent(document.university) + '</td>';
+    tableRow += '<td class="bookName">' + encodeURIComponent(document.bookName) + '</td>';
+    tableRow += '<td class="bookAuthor">' + encodeURIComponent(document.bookAuthor) + '</td>';
+    tableRow += '<td class="faculty">' + encodeURIComponent(document.faculty) + '</td>';
+    tableRow += '<td class="department">' + encodeURIComponent(document.department) + '</td>';
+    tableRow += '<td class="level">' + encodeURIComponent(document.level) + '</td>';
+    tableRow += '<td class="semester">' + encodeURIComponent(document.semester) + '</td>';
     tableRow += '<td class="book">' + `<a href=${document.book}; download=${document.bookName}><i class="fa fa-arrow-down"  style="color:green"></i> </a>` + '</td>'
     tableRow += '</tr>';
   });
