@@ -38,7 +38,6 @@ $(document).ready(function () {
     var sfDocRef = db.collection("books").doc(docuName);
     sfDocRef.set({
       uploader: uploader,
-      email: email,
       university: university,
       bookName: bookName,
       bookAuthor: bookAuthor,
@@ -52,7 +51,9 @@ $(document).ready(function () {
         // $('#operationStatus').html('<div class="alert alert-success"><strong>Success!</strong> Employee was updated.</div>').delay(2500).fadeOut('slow');
         // $('.employeeForm').css("display", "none");
         // alert("Successful");
-
+        db.collection("books").doc(docuName).collection('details').doc('detail').set({
+          email: email,
+        })
         console.log("UPLOAD-FILE called!");
         var storageReference = firebase.storage().ref();
         var file = document.getElementById("book").files[0];
@@ -126,16 +127,16 @@ function LoadTableData(querySnapshot) {
   var tableRow = '';
   querySnapshot.forEach(function (doc) {
     var document = doc.data();
-    tableRow += '<tr>';
-    tableRow += '<td class="uploader">' + encodeURIComponent(document.uploader) + '</td>';
-    tableRow += '<td class="university">' + encodeURIComponent(document.university) + '</td>';
+    tableRow += '<tr style="height: 1rem;">';
+    tableRow += '<td class="book">' + `<a href=${document.book}; download=${document.bookName}><i class="fa fa-arrow-down"  style="color:green"></i> </a>` + '</td>'
     tableRow += '<td class="bookName">' + encodeURIComponent(document.bookName) + '</td>';
     tableRow += '<td class="bookAuthor">' + encodeURIComponent(document.bookAuthor) + '</td>';
+    tableRow += '<td class="university">' + encodeURIComponent(document.university) + '</td>';
     tableRow += '<td class="faculty">' + encodeURIComponent(document.faculty) + '</td>';
     tableRow += '<td class="department">' + encodeURIComponent(document.department) + '</td>';
     tableRow += '<td class="level">' + encodeURIComponent(document.level) + '</td>';
     tableRow += '<td class="semester">' + encodeURIComponent(document.semester) + '</td>';
-    tableRow += '<td class="book">' + `<a href=${document.book}; download=${document.bookName}><i class="fa fa-arrow-down"  style="color:green"></i> </a>` + '</td>'
+    tableRow += '<td class="uploader">' + encodeURIComponent(document.uploader) + '</td>';
     tableRow += '</tr>';
   });
   $('tbody.tbodyData').html(tableRow.split("%20").join(" ").split("%26").join("&").split("%2C").join(","));

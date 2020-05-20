@@ -57,18 +57,19 @@ booksRef.get().then(function (querySnapshot) {
     .getDownloadURL()
     .then(url => {
 
+
         var tableRow = '';
-        tableRow += '<tr>';
-        tableRow += '<td class="uploader">' + encodeURIComponent(document.uploader) + '</td>';
-        tableRow += '<td class="university">' + encodeURIComponent(document.university) + '</td>';
-        tableRow += '<td class="bookName">' + encodeURIComponent(document.bookName) + '</td>';
-        tableRow += '<td class="bookAuthor">' + encodeURIComponent(document.bookAuthor) + '</td>';
-        tableRow += '<td class="faculty">' + encodeURIComponent(document.faculty) + '</td>';
-        tableRow += '<td class="department">' + encodeURIComponent(document.department) + '</td>';
-        tableRow += '<td class="level">' + encodeURIComponent(document.level) + '</td>';
-        tableRow += '<td class="semester">' + encodeURIComponent(document.semester) + '</td>';
-        tableRow += '<td class="book">' + `<a href=${document.book}; download=${document.bookName}><i class="fa fa-arrow-down"  style="color:green"></i> </a>` + '</td>'
-        tableRow += '</tr>';
+      tableRow += '<tr style="height: 1rem;">';
+      tableRow += '<td class="book">' + `<a href=${document.book}; download=${document.bookName}><i class="fa fa-arrow-down"  style="color:green"></i> </a>` + '</td>'
+      tableRow += '<td class="bookName">' + encodeURIComponent(document.bookName) + '</td>';
+      tableRow += '<td class="bookAuthor">' + encodeURIComponent(document.bookAuthor) + '</td>';
+      tableRow += '<td class="university">' + encodeURIComponent(document.university) + '</td>';
+      tableRow += '<td class="faculty">' + encodeURIComponent(document.faculty) + '</td>';
+      tableRow += '<td class="department">' + encodeURIComponent(document.department) + '</td>';
+      tableRow += '<td class="level">' + encodeURIComponent(document.level) + '</td>';
+      tableRow += '<td class="semester">' + encodeURIComponent(document.semester) + '</td>';
+      tableRow += '<td class="uploader">' + encodeURIComponent(document.uploader) + '</td>';
+      tableRow += '</tr>';
         $('tbody.tbodyData').append(tableRow.split("%20").join(" ").split("%26").join("&").split("%2C").join(","));
 
     }).catch(error => {

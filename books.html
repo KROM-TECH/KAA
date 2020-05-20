@@ -6,12 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="one stop location for all your academic needs">
   <meta name="theme-color" content="#335eea">
-    <link rel="icon" href="/img/72px.ico">
+  <link rel="icon" href="/img/72px.ico">
   <link rel="apple-touch-icon" href="/img/192px.png">
   <title>KAA</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   <link rel="stylesheet" href="./style/theme.min.css">
+  <link rel="stylesheet" href="./style/theme.min.css">
+  <style>
+    td{
+      width: 2rem;
+    }
+  </style>
 
 
   <link rel="manifest" crossorigin="use-credentials" href="/manifest.json">
@@ -77,12 +82,14 @@
     <div class="row text-center mb-5" style="overflow-x: scroll;" id="style-7">
 
       <!-- input to seach for an employee -->
-      <input class="btn btn-default col" placeholder="Search by " style="margin-bottom: 5rem;" id="searchArchive"> </input>
+      <input class="btn btn-default col" placeholder="Search by " style="margin-bottom: 5rem;" id="searchArchive">
+      </input>
 
       <!-- Filters drop down -->
       <div class="btn-group drop col">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="z-index: 10 !important; margin-bottom: 5rem;" aria-haspopup="true"
-          aria-expanded="false" id="searchFilter">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+          style="z-index: 10 !important; margin-bottom: 5rem;" aria-haspopup="true" aria-expanded="false"
+          id="searchFilter">
           Search by
         </button>
         <div class="dropdown-menu" id="dropDown">
@@ -98,19 +105,20 @@
 
     </div>
 
-    <div class="container mt-2" style="overflow-x: scroll; z-index: 1;" id="style-7">
+    <div class="container mt-2" style="overflow-x: scroll;  font-size: 0.9rem;" id="style-7">
       <table class="table table-striped">
         <thead class="thead-inverse">
-          <tr>
-            <th scope="col">Uploader</th>
-            <th scope="col">University</th>
+          <tr >
+            <th scope="col">Dw</th>
             <th scope="col">Book Name</th>
             <th scope="col">Book Author</th>
+            <th scope="col">University</th>
             <th scope="col">Faculty</th>
             <th scope="col">Department</th>
             <th scope="col">Level</th>
             <th scope="col">Semester</th>
-            <th scope="col">Download</th>
+            <th scope="col">Uploader</th>
+
           </tr>
         </thead>
         <tbody class="tbodyData">
@@ -121,44 +129,46 @@
   </div>
 
 
-      <script src="./js/app.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="./js/app.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-storage.js"></script>
-    
-    <!-- TODO: Add SDKs for Firebase products that you want to use
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-storage.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
           https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
-    
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyAtrKgkzn0EQub3tJ_2Q_0uoK3zMfqn-20",
-        authDomain: "kromtech-archive.firebaseapp.com",
-        databaseURL: "https://kromtech-archive.firebaseio.com",
-        projectId: "kromtech-archive",
-        storageBucket: "kromtech-archive.appspot.com",
-        messagingSenderId: "147947718015",
-        appId: "1:147947718015:web:c1afcf6e27d8a3a8e2c64a",
-        measurementId: "G-7C2TXMJXZR"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      firebase.analytics();
-    </script>
-    
-    <script src="./js/initialize.js"></script>
-    <script src="./js/filter.js"></script>
-    <script src="./js/script.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAtrKgkzn0EQub3tJ_2Q_0uoK3zMfqn-20",
+      authDomain: "kromtech-archive.firebaseapp.com",
+      databaseURL: "https://kromtech-archive.firebaseio.com",
+      projectId: "kromtech-archive",
+      storageBucket: "kromtech-archive.appspot.com",
+      messagingSenderId: "147947718015",
+      appId: "1:147947718015:web:c1afcf6e27d8a3a8e2c64a",
+      measurementId: "G-7C2TXMJXZR"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
+  <script src="./js/initialize.js"></script>
+  <script src="./js/filter.js"></script>
+  <script src="./js/script.js"></script>
 
   <!-- Js--Scripts -->
   <script src="./js/app.js"></script>
