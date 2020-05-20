@@ -79,16 +79,16 @@ $(document).ready(function () {
             // console.log("Image uploaded!");
             // alert("File uploaded!");
             $('#uploadModal').modal('hide'); //or  $('#IDModal').modal('hide');
-            $("#uploader").val() = "" 
-            $("#email").val() = ""
-            $('#book').val() = "" 
-            $("#university").val() = "" 
-             $("#bookName").val() = ""
-            $("#bookAuthor").val() = ""
-             $("#faculty").val() = ""
-            $("#department").val() = ""
-            $('#level').val() = ""
-            $('#semester').val() = ""
+           document.getElementById("uploader").value = "";
+            document.getElementById("university").value = "";
+            document.getElementById("bookAuthor").value = "";
+            document.getElementById("bookName").value = "";
+            document.getElementById("faculty").value = "";
+            document.getElementById("department").value = "";
+            document.getElementById("level").value = "";
+            document.getElementById("semester").value = "";
+            document.getElementById("book").value = "";
+            document.getElementById("email").value = "";
 
           })
             .catch(error => {
