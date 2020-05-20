@@ -27,7 +27,8 @@ $(document).ready(function () {
     var book = $('#book').val().split('\\').pop()
 
     if(uploader == "" || university == "" || bookAuthor =="" || bookName == "" || faculty == "" || department == "" || level == "" || semester == "" || book == "" || email == "" ){
-      alert('All fields are required before upload')
+      alert(`Error:- Not Uploaded
+      All fields are required before upload`)
       location.reload()
     }
 
@@ -78,6 +79,17 @@ $(document).ready(function () {
             // console.log("Image uploaded!");
             // alert("File uploaded!");
             $('#uploadModal').modal('hide'); //or  $('#IDModal').modal('hide');
+            $("#uploader").val() = "" 
+            $("#email").val() = ""
+            $('#book').val() = "" 
+            $("#university").val() = "" 
+             $("#bookName").val() = ""
+            $("#bookAuthor").val() = ""
+             $("#faculty").val() = ""
+            $("#department").val() = ""
+            $('#level').val() = ""
+            $('#semester').val() = ""
+
           })
             .catch(error => {
               console.log("Error ==== ", error);
