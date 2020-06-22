@@ -10,7 +10,7 @@ $(document).ready(function () {
         $(`#searchFilter`).text(selText);
 
         // console.log(selText)
-        $(`#searchArchive`).change(function () {
+        $(`#searchArchive`).keyup(function () {
             // console.log('You entered: ', $(this).val());
             //Get the Employee Data
             if (selText == 'Uploader') {
