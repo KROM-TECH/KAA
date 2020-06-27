@@ -1,0 +1,372 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Become a Faculty Rep</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Spartan&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  font-size: 12pt;
+  font-family: "Spartan";
+  color: #2A293E;
+}
+
+.volunter-form {
+  background: #f8f4e5;
+  padding: 50px 100px;
+  border-top: 10px solid #335EEA;
+}
+
+label, input, textarea {
+  display: block;
+  width: 100%;
+  font-size: 12pt;
+  line-height: 24pt;
+  font-family: "Spartan";
+}
+
+input {
+  margin-bottom: 24pt;
+}
+
+
+span {
+  font-size: 8pt;
+}
+
+em {
+  color: #335EEA;
+  font-weight: bold;
+}
+
+input, textarea {
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  background: #f8f4e5;
+  padding-left: 5px;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border: 1px solid #6bd4b1;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  display: block;
+  float: right;
+  line-height: 24pt;
+  padding: 0 20px;
+  border: none;
+  background: #335EEA;
+  color: white;
+  letter-spacing: 2px;
+  transition: 0.2s all ease-in-out;
+  border-bottom: 2px solid transparent;
+  outline: none;
+}
+button:hover {
+  background: inherit;
+  color: #335EEA;
+  border-bottom: 2px solid #335EEA;
+}
+
+::selection {
+  background: #ffc7b8;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  border: 1px solid #335EEA;
+  -webkit-text-fill-color: #2A293E;
+  -webkit-box-shadow: 0 0 0px 1000px #f8f4e5 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.bulgy-radios {
+  
+
+  padding: 2rem 0 ;
+  border-radius: 1rem;
+}
+.bulgy-radios label {
+  display: block;
+  position: relative;
+  height: 1em;
+  padding-left: 4rem;
+  margin-bottom: 1.75rem;
+  cursor: pointer;
+  font-size: 2.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #555;
+  letter-spacing: 1px;
+}
+.bulgy-radios label:hover input:not(:checked) ~ .radio {
+  opacity: 0.8;
+}
+.bulgy-radios .label {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  padding-right: 3rem;
+}
+.bulgy-radios .label span {
+  line-height: 1em;
+}
+.bulgy-radios input {
+  position: absolute;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  left: -2000px;
+}
+.bulgy-radios input:checked ~ .radio {
+  background-color: #335EEA;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+.bulgy-radios input:checked ~ .radio::after {
+  opacity: 1;
+}
+.bulgy-radios input:checked ~ .label {
+  color: #335EEA;
+}
+.bulgy-radios input:checked ~ .label span {
+  -webkit-animation: bulge .5s forwards;
+          animation: bulge .5s forwards;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(1) {
+  -webkit-animation-delay: 0.025s;
+          animation-delay: 0.025s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(2) {
+  -webkit-animation-delay: 0.05s;
+          animation-delay: 0.05s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(3) {
+  -webkit-animation-delay: 0.075s;
+          animation-delay: 0.075s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(4) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(5) {
+  -webkit-animation-delay: 0.125s;
+          animation-delay: 0.125s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(6) {
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(7) {
+  -webkit-animation-delay: 0.175s;
+          animation-delay: 0.175s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(8) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(9) {
+  -webkit-animation-delay: 0.225s;
+          animation-delay: 0.225s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(10) {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(11) {
+  -webkit-animation-delay: 0.275s;
+          animation-delay: 0.275s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(12) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(13) {
+  -webkit-animation-delay: 0.325s;
+          animation-delay: 0.325s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(14) {
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(15) {
+  -webkit-animation-delay: 0.375s;
+          animation-delay: 0.375s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(16) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(17) {
+  -webkit-animation-delay: 0.425s;
+          animation-delay: 0.425s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(18) {
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
+}
+.bulgy-radios input:checked ~ .label span:nth-child(19) {
+  -webkit-animation-delay: 0.475s;
+          animation-delay: 0.475s;
+}
+
+.radio {
+  position: absolute;
+  top: 0.2rem;
+  left: 0;
+  height: 2.5rem;
+  width: 2.5rem;
+  background: #c9ded6;
+  border-radius: 50%;
+}
+.radio::after {
+  content: '';
+  position: absolute;
+  opacity: 0;
+  top: .5rem;
+  left: .5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #fff;
+}
+
+@-webkit-keyframes bulge {
+  50% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    font-size: 1em;
+    font-weight: bold;
+  }
+}
+
+@keyframes bulge {
+  50% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    font-size: 1em;
+    font-weight: bold;
+  }
+}
+
+
+  </style>
+  <body>
+    <div class="volunter-form">
+      <form action="#">
+        <label for="name">NAME <em>&#x2a;</em></label
+        ><input
+          id="name"
+          name="name"
+          required
+          type="text"
+        /><label for="email">EMAIL <em>&#x2a;</em></label
+        ><input
+          id="email"
+          name="email"
+          required
+          type="email"
+        /><label for="phone">PHONE  <em>&#x2a;</em></label
+        ><input
+          id="phone"
+          name="phone"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          type="tel"
+        />
+        <label for="internet-access">DO YOU HAVE INTERNET ACCESS?  <em>&#x2a;</em></label
+        >
+        <div class="bulgy-radios" role="radiogroup" aria-labelledby="bulgy-radios-label">
+          <label>
+            <input type="radio" name="options" checked />
+            <span class="radio"></span>
+            <span class="label">YES</span>
+          </label>
+          <label>
+            <input type="radio" name="options" />
+            <span class="radio"></span>
+            <span class="label">NO</span>
+          </label>
+         
+         
+        </div>
+        
+        <label for="internet-access">HOW MANY HOURS CAN YOU GIVE A WEEK?  <em>&#x2a;</em></label
+          ><input id="internet-access" name="internet-access" type="text" />
+          <div class="bulgy-radios" role="radiogroup" aria-labelledby="bulgy-radios-label">
+            <label>
+              <input type="radio" name="options" checked />
+              <span class="radio"></span>
+              <span class="label">2-4 HOURS</span>
+            </label>
+            <label>
+              <input type="radio" name="options" />
+              <span class="radio"></span>
+              <span class="label">4-8 HOURS</span>
+            </label>
+            <label>
+              <input type="radio" name="options" />
+              <span class="radio"></span>
+              <span class="label">8-10 HOURS</span>
+            </label>
+            <label>
+              <input type="radio" name="options" />
+              <span class="radio"></span>
+              <span class="label">12 HOURS +</span>
+            </label>
+          </div>
+          
+          
+        <label
+          for="internet-access"
+          >WHY DO YOU WANT TO JOIN US? <em>&#x2a;</em></label
+        ><textarea
+          id="reason"
+          name="reason"
+          required
+          rows="4"
+        ></textarea>
+        
+      <button
+          id="submit"
+        >
+          SUBMIT
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
