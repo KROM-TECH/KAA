@@ -296,6 +296,7 @@ select{
   </style>
   <body>
     <div class="volunter-form">
+      <p><i>Note:- This is a Voluntary form and not an employment form. <br> So don't sign up with money in mind</i></p>
       <form action="https://formspree.io/mknqvbak" method="POST">
         <label for="name">NAME <em>&#x2a;</em></label>
         <input id="name" required type="text" name="name"/>
@@ -310,6 +311,23 @@ select{
           pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
           type="tel"
         />
+                <label for="faculty"
+        >Faculty <em>&#x2a;</em></label
+      >
+
+      <select name="internet" required>
+        <option value="Select" selected disabled=""></option>
+        <option value="Arts">Arts</option>
+        <option value="Education">Education</option>
+        <option value="Engineering">Engineering</option>
+        <option value="Environmental science">Environmental science</option>
+        <option value="Law">Law</option>
+        <option value="Pharmacy">Pharmacy</option>
+        <option value="Science">Science</option>
+        <option value="Social Science">Social Science</option>
+        <option value="Pharmacy">Pharmacy</option>
+       
+      </select>
         <label for="internet-access"
         >DO YOU HAVE INTERNET ACCESS? <em>&#x2a;</em></label
       >
@@ -367,7 +385,7 @@ select{
 
         <label for="internet-access"
           >WHY DO YOU WANT TO JOIN US? <em>&#x2a;</em></label
-        ><textarea id="reason" name="message" required rows="4"></textarea>
+        ><textarea id="reason" name="message" required rows="4" placeholder="There can only be one Rep per Faculty, So sell Yourself"</textarea>
 
         <button id="submit">
           SUBMIT
