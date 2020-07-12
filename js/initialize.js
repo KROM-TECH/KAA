@@ -2,7 +2,19 @@
 var db = firebase.firestore();
 var booksRef = db.collection("books");
 var table = document.querySelector('.tbodyData')
+var spinner = document.querySelector('.spinner')
+// var table = document.querySelector('body')
 
+window.addEventListener('scroll', e => {
+  // console.log(e)
+  // console.log('scrolling')
+  console.log(window.scrollY)
+  console.log(window.innerHeight)
+
+  if (window.scrollY > window.innerHeight) {
+    spinner.style.display= 'block'
+  }
+})
 
 
 booksRef.get().then(function (querySnapshot) {
@@ -16,6 +28,7 @@ booksRef.get().then(function (querySnapshot) {
     .getDownloadURL()
     .then(url => {
       // console.log(url)
+      spinner.style.display= 'none'
 
 
         var tableRow = ``;
@@ -40,3 +53,4 @@ booksRef.get().then(function (querySnapshot) {
 
 
 });
+
