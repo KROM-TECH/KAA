@@ -9,9 +9,9 @@ window.addEventListener('scroll', e => {
   // console.log(e)
   // console.log('scrolling')
   console.log(window.scrollY)
-  console.log(window.innerHeight)
+  console.log(window.outerHeight)
 
-  if (window.scrollY > window.innerHeight) {
+  if (window.scrollY > window.outerHeight) {
     spinner.style.display= 'block'
   }
 })
