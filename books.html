@@ -22,32 +22,7 @@
 
   <link rel="manifest" crossorigin="use-credentials" href="/manifest.json">
 
-  <!-- Scroll bar style -->
-  <style>
-    body {
-      /* IE */
-      scrollbar-base-color: transparent;
-      scrollbar-base-color: transparent;
-      scrollbar-3dlight-color: transparent;
-      scrollbar-highlight-color: transparent;
-      scrollbar-track-color: transparent;
-      scrollbar-arrow-color: transparent;
-      scrollbar-shadow-color: transparent;
-  
-    }
 
-    #style-7::-webkit-scrollbar-track {
-      display: none;
-    }
-
-    #style-7::-webkit-scrollbar {
-      display: none;
-    }
-
-    #style-7::-webkit-scrollbar-thumb {
-      display: none;
-    }
-  </style>
 </head>
 
 <body>
@@ -74,10 +49,10 @@
   </section>
 
   <div class="container">
-    <div class="row text-center mb-5" style="overflow-x: scroll; display: flex; align-items: center;" id="style-7">
+    <div class="row scrollx text-center mb-5" style="overflow-x: scroll; display: flex; align-items: center;" id="style-7">
 
       <!-- input to seach for an employee -->
-      <input class="btn btn-default " style="width: 100%;" placeholder="Search by " style="margin-bottom: 5rem;" id="searchArchive">
+      <input class="btn primary " style="width: 100%;" placeholder="Enter Search Keywords " style="margin-bottom: 5rem;" id="searchArchive">
       </input>
 
       <!-- Filters drop down -->
@@ -101,9 +76,10 @@
     </div>
 
     <div class="container mt-2" style="overflow-x: scroll;  font-size: 0.9rem;" id="style-7">
-      <table class="table table-striped">
+
+       <table class="table table-striped">
         <thead class="thead-inverse">
-          <tr >
+          <tr>
             <th scope="col">Dw</th>
             <th scope="col">Book Name</th>
             <th scope="col">Book Author</th>
@@ -113,12 +89,16 @@
             <th scope="col">Level</th>
             <th scope="col">Semester</th>
             <th scope="col">Uploader</th>
-
           </tr>
         </thead>
-        <tbody class="tbodyData">
-        </tbody>
+        <tbody class="tbodyData">      
+        </tbody>    
       </table>
+                    <div class="spinner">
+                      <div class="bounce1"></div>
+                      <div class="bounce2"></div>
+                      <div class="bounce3"></div>
+                    </div>
     </div>
 
   </div>
@@ -136,7 +116,7 @@
 
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-storage.js"></script>
 
